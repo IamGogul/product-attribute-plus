@@ -40,6 +40,20 @@ if( !function_exists( 'woo_pa_plus_is_plugin_active' ) ) {
 	}
 }
 
+/**
+ * Get attribute's properties
+ */
+if( !function_exists( 'woo_pa_plus_get_tax_attribute' ) ) {
+	function woo_pa_plus_get_tax_attribute( $taxonomy ) {
+		global $wpdb;
+
+		$attr = substr( $taxonomy, 3 );
+		$attr = $wpdb->get_row( "SELECT attribute_id, attribute_name, attribute_label, attribute_type FROM " . $wpdb->prefix . "woocommerce_attribute_taxonomies WHERE attribute_name = '$attr'" );
+
+		return $attr;
+	}
+}
+
 if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 
     final class Woo_Product_Attr_Plus_WP_Plugin {
@@ -48,6 +62,21 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 		 * A reference to an instance of this class.
 		 */
 		private static $instance = null;
+
+		/**
+		 * Additional Product Attribute types
+		 */
+		public $product_attr_types;
+
+		/**
+		 * Swatch Sizes
+		 */
+		public $swatch_sizes = [];
+
+		/**
+		 * Swatch Shapes
+		 */
+		public $swatch_shapes = [];
 
 		/**
 		 * Returns the instance.
@@ -62,8 +91,39 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 		}
 
         public function __construct() {
+
+			$this->product_attr_types = apply_filters( 'woo-pa-plus-filter/plugin/product-attr-types', [
+				'woo-pa-plus-color-sw' => esc_html__( 'Color Swatch', 'pap' ),
+				'woo-pa-plus-image-sw' => esc_html__( 'Image Swatch', 'pap' ),
+				'woo-pa-plus-label-sw' => esc_html__( 'Label Swatch', 'pap' ),
+				'woo-pa-plus-radio-btn' => esc_html__( 'Radio Button', 'pap' ),
+			]);
+
+			$this->swatch_sizes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/sizes', [
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-tiny'   => esc_html__( 'Tiny', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small'  => esc_html__( 'Small', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-medium' => esc_html__( 'Medium', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-large'  => esc_html__( 'Large', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Large', 'pap' ),
+			]);
+
+			$this->swatch_shapes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/shapes', [
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-circle'         => esc_html__( 'Circle', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-diamond'        => esc_html__( 'Diamond', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-heart'          => esc_html__( 'Heart', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-hexagon'        => esc_html__( 'Hexagon', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-pentagon'       => esc_html__( 'Pentagon', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-rounded-square' => esc_html__( 'Rounded Square', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square'         => esc_html__( 'Square', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-star'           => esc_html__( 'Star', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-triangle'       => esc_html__( 'Triangle', 'pap' ),
+			]);
+
             $this->define_constants();
             $this->load_dependencies();
+
+			// HPOS	Compatibility
+			add_action( 'before_woocommerce_init', [ $this, 'wc_features_support' ] );
 
 			// Register activation and deactivation hook.
 			register_activation_hook( __FILE__, [ $this, 'activate_plugin' ] );
@@ -109,6 +169,22 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
             if( !$this->check_requirement() ) {
                 return;
             }
+
+			/**
+             * Include internationalization functionality of the plugin.
+             */
+			require_once KFWOOSW_CONST_DIR . 'i18n/class-i18n.php';
+
+			/**
+			 * Include the functionality for the admin-facing area of the plugin.
+			 */
+			require_once KFWOOSW_CONST_DIR . 'admin/class-admin.php';
+
+			/**
+			 * Include the functionality for the public-facing area of the plugin.
+			 */
+			require_once KFWOOSW_CONST_DIR . 'public/class-public.php';
+
         }
 
 		/**
@@ -170,6 +246,20 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 
             return true;
         }
+
+		/**
+		 * Check whether WooCommerce plugin installed.
+		 */
+		public function is_woocommerce_installed() {
+			$plugins = get_plugins();
+			return isset( $plugins['woocommerce/woocommerce.php'] );
+		}
+
+		public function wc_features_support() {
+			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', WPAP_CONST_FILE, true );
+			}
+		}
 
 		/**
 		 * The code that runs during plugin activation.

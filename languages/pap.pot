@@ -1,0 +1,679 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Attribute Plus\n"
+"POT-Creation-Date: 2024-04-11 23:45+0530\n"
+"PO-Revision-Date: 2016-04-01 11:48+0530\n"
+"Last-Translator: \n"
+"Language-Team: M Gogul Saravanan<m.gogulsaravanan@gmail.com@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;"
+"_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/class-action-links.php:55
+msgid "Settings"
+msgstr ""
+
+#: ../admin/class-action-links.php:61
+msgid "Add Swatch"
+msgstr ""
+
+#: ../admin/class-action-links.php:77
+msgid "Premium Themes"
+msgstr ""
+
+#: ../admin/class-action-links.php:83
+msgid "Premium Plugins"
+msgstr ""
+
+#: ../admin/class-action-links.php:89
+msgid "Documentation"
+msgstr ""
+
+#: ../admin/class-action-links.php:95
+msgid "Support"
+msgstr ""
+
+#: ../admin/class-admin.php:119 ../admin/class-admin.php:120
+msgid "🎖️ Swatches"
+msgstr ""
+
+#: ../admin/class-wc-product-attributes.php:245
+#: ../admin/class-wc-product-attributes.php:259 ../admin/class-wc-product.php:251
+msgid "Remove Image"
+msgstr ""
+
+#: ../admin/class-wc-product-attributes.php:257 ../admin/class-wc-product.php:249
+msgid "Choose an Image"
+msgstr ""
+
+#: ../admin/class-wc-product-attributes.php:258 ../admin/class-wc-product.php:250
+msgid "Set Image"
+msgstr ""
+
+#: ../admin/class-wc-product-attributes.php:261 ../admin/class-wc-product.php:252
+msgid "Add Image"
+msgstr ""
+
+#: ../admin/class-wc-product-attributes.php:292 ../admin/class-wc-product.php:211
+#: ../admin/class-wc-product.php:228 ../admin/class-wc-product.php:253
+#: ../admin/class-wc-settings-page.php:62
+msgid "Tooltip"
+msgstr ""
+
+#: ../admin/class-wc-product.php:99
+msgid "Select terms"
+msgstr ""
+
+#: ../admin/class-wc-product.php:123
+msgid "Select all"
+msgstr ""
+
+#: ../admin/class-wc-product.php:124
+msgid "Select none"
+msgstr ""
+
+#: ../admin/class-wc-product.php:127
+msgid "Add new"
+msgstr ""
+
+#: ../admin/class-wc-product.php:175
+msgid "Add New Term"
+msgstr ""
+
+#: ../admin/class-wc-product.php:176 ../admin/class-wc-product.php:328
+msgid "Add New"
+msgstr ""
+
+#: ../admin/class-wc-product.php:177
+msgid "Cancel"
+msgstr ""
+
+#: ../admin/class-wc-product.php:179
+msgid "Name"
+msgstr ""
+
+#: ../admin/class-wc-product.php:180
+msgid "Slug"
+msgstr ""
+
+#: ../admin/class-wc-product.php:210 ../kinforce-woo-swatches.php:75
+msgid "Color"
+msgstr ""
+
+#: ../admin/class-wc-product.php:227 ../kinforce-woo-swatches.php:77
+msgid "Label"
+msgstr ""
+
+#: ../admin/class-wc-product.php:248 ../kinforce-woo-swatches.php:76
+msgid "Image"
+msgstr ""
+
+#: ../admin/class-wc-product.php:275
+msgid "Wrong Action"
+msgstr ""
+
+#: ../admin/class-wc-product.php:277 ../admin/class-wc-product.php:286
+#: ../admin/class-wc-product.php:295 ../admin/class-wc-product.php:304
+#: ../admin/class-wc-product.php:315
+msgid "Try Again"
+msgstr ""
+
+#: ../admin/class-wc-product.php:284
+msgid "Require more data"
+msgstr ""
+
+#: ../admin/class-wc-product.php:293
+msgid "Taxonomy is not exists"
+msgstr ""
+
+#: ../admin/class-wc-product.php:302
+msgid "This term is already exists"
+msgstr ""
+
+#: ../admin/class-wc-product.php:327
+msgid "Added successfully"
+msgstr ""
+
+#: ../admin/class-wc-product.php:344
+msgid "KinForce Plugin"
+msgstr ""
+
+#: ../admin/class-wc-product.php:380
+msgid "Save Settings"
+msgstr ""
+
+#: ../admin/class-wc-product.php:420
+msgid "Shop Page :: Swatch Settings"
+msgstr ""
+
+#: ../admin/class-wc-product.php:430 ../admin/class-wc-product.php:523
+msgid "Attributes Type?"
+msgstr ""
+
+#: ../admin/class-wc-product.php:435 ../admin/class-wc-product.php:528
+msgid "Plugin Setting."
+msgstr ""
+
+#: ../admin/class-wc-product.php:437 ../admin/class-wc-product.php:530
+msgid "see here"
+msgstr ""
+
+#: ../admin/class-wc-product.php:444 ../admin/class-wc-product.php:537
+msgid "Custom Swatch(es)"
+msgstr ""
+
+#: ../admin/class-wc-product.php:454 ../admin/class-wc-product.php:547
+msgid "Choose Attributes?"
+msgstr ""
+
+#: ../admin/class-wc-product.php:513
+msgid "Archive Pages :: Swatch Settings"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:55
+msgid "Shop"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:56
+msgid "Archive"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:57
+msgid "Variable Product"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:58
+msgid "Upsells & Related"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:59
+msgid "Cart"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:60
+msgid "Checkout"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:61
+msgid "Order"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:146
+msgid "Configure swatch settings for the product catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:152 ../admin/class-wc-settings-page.php:275
+#: ../admin/class-wc-settings-page.php:400 ../admin/class-wc-settings-page.php:484
+#: ../admin/class-wc-settings-page.php:608 ../admin/class-wc-settings-page.php:670
+#: ../admin/class-wc-settings-page.php:732
+msgid "Manage Swatch"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:153
+msgid "Toggle the display of swatches in the catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:159 ../admin/class-wc-settings-page.php:282
+#: ../admin/class-wc-settings-page.php:407 ../admin/class-wc-settings-page.php:491
+#: ../admin/class-wc-settings-page.php:615 ../admin/class-wc-settings-page.php:677
+#: ../admin/class-wc-settings-page.php:739
+msgid "Swatch Size"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:160
+msgid "Select the size of the swatch to be displayed on the catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:171 ../admin/class-wc-settings-page.php:294
+#: ../admin/class-wc-settings-page.php:419 ../admin/class-wc-settings-page.php:503
+#: ../admin/class-wc-settings-page.php:627 ../admin/class-wc-settings-page.php:690
+#: ../admin/class-wc-settings-page.php:752
+msgid "Swatch Shape"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:172
+msgid "Select the shape of the swatch to be displayed on the catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:183 ../admin/class-wc-settings-page.php:307
+#: ../admin/class-wc-settings-page.php:516
+msgid "Swatch Position"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:184
+msgid "Select the position of the swatch to be displayed on the catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:193
+msgid "Show only one swatch on Product Catalog"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:194
+msgid "This option lets you to show only one swatch attribute in the catalog page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:201 ../admin/class-wc-settings-page.php:325
+#: ../admin/class-wc-settings-page.php:534
+msgid "Product Attribute"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:202
+msgid "Choose what product attribute to display on product catalog page as swatch."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:212 ../admin/class-wc-settings-page.php:337
+#: ../admin/class-wc-settings-page.php:545
+msgid "Max swatches?"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:213
+msgid ""
+"How many swatches of an attribute to show with more link on product catalog page? "
+"Empty will show all swatches of an attribute."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:223 ../admin/class-wc-settings-page.php:348
+#: ../admin/class-wc-settings-page.php:431 ../admin/class-wc-settings-page.php:556
+msgid "Swatch Border Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:224 ../admin/class-wc-settings-page.php:349
+#: ../admin/class-wc-settings-page.php:432 ../admin/class-wc-settings-page.php:557
+#: ../admin/class-wc-settings-page.php:641 ../admin/class-wc-settings-page.php:703
+#: ../admin/class-wc-settings-page.php:765
+msgid "Set the border color of the swatch."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:234 ../admin/class-wc-settings-page.php:359
+#: ../admin/class-wc-settings-page.php:443 ../admin/class-wc-settings-page.php:567
+msgid "Swatch Hover Border Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:235 ../admin/class-wc-settings-page.php:360
+#: ../admin/class-wc-settings-page.php:444 ../admin/class-wc-settings-page.php:568
+msgid "The border color of the swatch was set when hovered."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:245 ../admin/class-wc-settings-page.php:370
+#: ../admin/class-wc-settings-page.php:454 ../admin/class-wc-settings-page.php:578
+msgid "Active Swatch Border Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:246 ../admin/class-wc-settings-page.php:371
+#: ../admin/class-wc-settings-page.php:455 ../admin/class-wc-settings-page.php:579
+msgid "Set the border color of the selected swatch."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:269
+msgid "Swatch settings for the product archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:276
+msgid "Toggle the display of swatches in the archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:283
+msgid "Select the size of the swatch to be displayed on the archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:295
+msgid "Select the shape of the swatch to be displayed on the archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:308
+msgid "Select the position of the swatch to be displayed on the archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:317
+msgid "Show only one swatch on archive"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:318
+msgid ""
+"This option lets you to show only one swatch attribute in the product archive page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:326
+msgid "Choose what product attribute to display on product archive as swatch."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:338
+msgid ""
+"How many swatches of an attribute to show with more link on product archive page? "
+"Empty will show all swatches of an attribute."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:394
+msgid "Configure swatch settings for the variable product detail page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:401
+msgid "Toggle the display of swatches in the variable product detail page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:408
+msgid ""
+"Select the size of the swatch to be displayed on the variable product detail page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:420
+msgid ""
+"Select the shape of the swatch to be displayed on the variable product detail page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:478
+msgid "Swatch settings for the Upsells & Related products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:485
+msgid "Toggle the display of swatches in the upsells & related products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:492
+msgid "Select the size of the swatch to be displayed on the upsells & related products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:504
+msgid ""
+"Select the shape of the swatch to be displayed on the upsells & related products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:517
+msgid ""
+"Select the position of the swatch to be displayed on the upsells & related products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:526
+msgid "Show only one swatch"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:527
+msgid ""
+"This option lets you to show only one swatch attribute in the upsells & related "
+"products."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:535
+msgid ""
+"Choose what product attribute to display on upsells & related products as swatch."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:546
+msgid ""
+"How many swatches of an attribute to show with more link on product upsells & related "
+"products? Empty will show all swatches of an attribute."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:602
+msgid "Configure swatch settings for the cart page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:609
+msgid "Toggle the display of swatches in the cart page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:616
+msgid "Select the size of the swatch to be displayed on the cart page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:628
+msgid "Select the shape of the swatch to be displayed on the cart page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:640 ../admin/class-wc-settings-page.php:702
+#: ../admin/class-wc-settings-page.php:764
+msgid "Border Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:664
+msgid "Configure swatch settings for the checkout page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:671
+msgid "Toggle the display of swatches in the checkout page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:678
+msgid "Select the size of the swatch to be displayed on the checkout page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:691
+msgid "Select the shape of the swatch to be displayed on the checkout page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:726
+msgid "Configure swatch settings for the order pages( View Order, Order Received )."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:733
+msgid "Toggle the display of swatches in the order page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:740
+msgid "Select the size of the swatch to be displayed on the order page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:753
+msgid "Select the shape of the swatch to be displayed on the order page."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:788
+msgid "Configure settings for the swatch's tooltip."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:794
+msgid "Manage Tooltip"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:795
+msgid "Toggle the display of swatches in the tooltip."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:801
+msgid "Background Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:802
+msgid "Set the background color of the tooltip."
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:812
+msgid "Text Color"
+msgstr ""
+
+#: ../admin/class-wc-settings-page.php:813
+msgid "Set the text color of the tooltip."
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:81
+msgid "Tiny"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:82
+msgid "Small"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:83
+msgid "Medium"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:84
+msgid "Large"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:88
+msgid "Circle"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:89
+msgid "Square"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:90
+msgid "Rounded Square"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:94
+msgid "Above Product Title"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:95
+msgid "Below Product Title"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:96
+msgid "Above Product Price"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:97
+msgid "Below Product Price"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:98
+msgid "Above Add To Cart Button"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:101
+#, php-format
+msgid "Use Action %1$s"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:143
+msgid "🎖️ KinForce Swatches"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:217
+#, php-format
+msgid ""
+"The %1$s %2$s %3$s plugin requires %1$sWooCommerce%3$s plugin to be installed & "
+"activated."
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:236
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:250
+msgid "Install WooCommerce"
+msgstr ""
+
+#: ../kinforce-woo-swatches.php:292
+msgid "Choose Product Attribute"
+msgstr ""
+
+#: ../public/class-public.php:66
+#, php-format
+msgid "%1$s %2$s by %3$s"
+msgstr ""
+
+#: ../public/class-public.php:123
+msgid "Add  to cart"
+msgstr ""
+
+#: ../public/class-public.php:124
+msgid "Read More"
+msgstr ""
+
+#: ../public/class-public.php:125
+msgid "Select options"
+msgstr ""
+
+#: ../public/class-public.php:219
+#, php-format
+msgid "/* Create a file %s in active theme and add the below css in it. */"
+msgstr ""
+
+#: ../public/class-wc-cart.php:109
+#, php-format
+msgid "Remove %s from cart"
+msgstr ""
+
+#: ../public/class-wc-cart.php:126
+msgid "Product"
+msgstr ""
+
+#: ../public/class-wc-cart.php:144
+msgid "Available on backorder"
+msgstr ""
+
+#: ../public/class-wc-cart.php:150
+msgid "Price"
+msgstr ""
+
+#: ../public/class-wc-cart.php:154
+msgid "Quantity"
+msgstr ""
+
+#: ../public/class-wc-cart.php:177
+msgid "Subtotal"
+msgstr ""
+
+#: ../public/class-wc-product-archives.php:169
+#: ../public/class-wc-product-swatch-shortcode.php:139
+#: ../shortcode/shortcodes/class-sc-swatch.php:134
+msgid "Clear"
+msgstr ""
+
+#: ../public/class-wc-product-archives.php:298
+#: ../public/class-wc-product-swatch-shortcode.php:264
+#, php-format
+msgid "Lode More %1$s"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:23
+msgid "Display a list of swatches to filter products in your store."
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:28
+msgid "Filter Products by Swatches"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:239
+msgid "Filter by"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:240
+msgid "Title"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:245
+msgid "Swatch"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:251
+msgid "Shape"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:257
+msgid "Size"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:263
+msgid "Border color"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:268
+msgid "Active border color"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:273
+msgid "Query type"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:275
+msgid "AND"
+msgstr ""
+
+#: ../widget/widgets/class-wc-widget-swatch-filter.php:276
+msgid "OR"
+msgstr ""
