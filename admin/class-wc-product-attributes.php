@@ -5,12 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
+if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 
 	/**
-	 * Define the functionality for the admin-facing area of the plugin.
+	 * Define all actions and hooks that occur in the admin product attributes edit page.
+     * edit.php?post_type=product&page=product_attributes
 	 */
-    class Woo_Product_Attr_Plus_WP_Plugin_Admin {
+    class Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes {
 
 		/**
 		 * A reference to an instance of this class.
@@ -36,16 +37,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 		 */
         public function __construct() {
 
-            $this->load_modules();
-            do_action( 'woo-pa-plus-action/plugin/admin/loaded' );
-
-        }
-
-        public function load_modules() {
-
-            require_once WPAP_CONST_DIR . 'admin/class-action-links.php';
-
-            require_once WPAP_CONST_DIR . 'admin/class-wc-product-attributes.php';
+            do_action( 'woo-pa-plus-action/plugin/product-attributes/loaded' );
 
         }
 
@@ -53,16 +45,16 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin_admin' ) ) {
+if( !function_exists( 'woo_pa_plus_wp_plugin_product_attributes' ) ) {
 
     /**
      * Returns the instance of a class.
      */
-    function woo_pa_plus_wp_plugin_admin() {
+    function woo_pa_plus_wp_plugin_product_attributes() {
 
-        return Woo_Product_Attr_Plus_WP_Plugin_Admin::get_instance();
+        return Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes::get_instance();
     }
 }
 
-woo_pa_plus_wp_plugin_admin();
+woo_pa_plus_wp_plugin_product_attributes();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */

@@ -6,7 +6,7 @@
  * Plugin URI:  https://wordpress.org/plugins/product-attribute-plus
  * Description: A free WooCommerce extender plugin that expands product attribute options. It ads Color, Label, and Image Swatches alongside the standard dropdown menu.
  * Version: 1.0.0
- * Author: M Gogul Saravanan
+ * Author: 🎖️ M Gogul Saravanan
  * Author URI: https://profiles.wordpress.org/iamgogul/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -173,17 +173,17 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 			/**
              * Include internationalization functionality of the plugin.
              */
-			require_once KFWOOSW_CONST_DIR . 'i18n/class-i18n.php';
+			require_once WPAP_CONST_DIR . 'i18n/class-i18n.php';
 
 			/**
 			 * Include the functionality for the admin-facing area of the plugin.
 			 */
-			require_once KFWOOSW_CONST_DIR . 'admin/class-admin.php';
+			require_once WPAP_CONST_DIR . 'admin/class-admin.php';
 
 			/**
 			 * Include the functionality for the public-facing area of the plugin.
 			 */
-			require_once KFWOOSW_CONST_DIR . 'public/class-public.php';
+			require_once WPAP_CONST_DIR . 'public/class-public.php';
 
         }
 
