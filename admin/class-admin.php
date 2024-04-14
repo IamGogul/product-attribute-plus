@@ -75,7 +75,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 					WPAP_CONST_URL . 'assets/admin/js/admin' . WPAP_CONST_DEBUG_SUFFIX . '.js',
 					$js_deps,
 					WPAP_CONST_VERSION,
-					false
+					true
 				);
 			}
 
