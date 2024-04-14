@@ -73,6 +73,100 @@ var AdminWPAPProductAttrPage = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./assets/source/js/admin/settings/dependency.js":
+/*!*******************************************************!*\
+  !*** ./assets/source/js/admin/settings/dependency.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AdminWPAPSettingsDependency)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var AdminWPAPSettingsDependency = /*#__PURE__*/function () {
+  function AdminWPAPSettingsDependency(options) {
+    _classCallCheck(this, AdminWPAPSettingsDependency);
+    this.options = $.extend(true, {}, options);
+  }
+  return _createClass(AdminWPAPSettingsDependency, [{
+    key: "_handler",
+    value: function _handler($handlerEle, $childEle) {
+      $handlerEle.on("change", function () {
+        var _this = $(this),
+          _settings = _this.closest("tbody").find($childEle).closest("tr"),
+          _state = _this.is(":checked");
+        if (_state) {
+          _settings.show();
+        } else {
+          _settings.hide();
+        }
+      }).trigger("change");
+    }
+  }]);
+}();
+
+
+/***/ }),
+
+/***/ "./assets/source/js/admin/settings/variable-product.js":
+/*!*************************************************************!*\
+  !*** ./assets/source/js/admin/settings/variable-product.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AdminWPAPVariableProductSettings)
+/* harmony export */ });
+/* harmony import */ var _dependency__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dependency */ "./assets/source/js/admin/settings/dependency.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+var AdminWPAPVariableProductSettings = /*#__PURE__*/function () {
+  function AdminWPAPVariableProductSettings(options) {
+    _classCallCheck(this, AdminWPAPVariableProductSettings);
+    this.options = $.extend(true, {
+      vProductSettingsHandler: "#woo_pap_manage_swatch_vproduct",
+      vProductSettingsSelector: ".woo-pap-manage-swatch-vproduct-field"
+    }, options);
+    this._init();
+  }
+  return _createClass(AdminWPAPVariableProductSettings, [{
+    key: "_init",
+    value: function _init() {
+      var _self = this;
+      _self._swatchHandler();
+    }
+  }, {
+    key: "_swatchHandler",
+    value: function _swatchHandler() {
+      var _self = this;
+      var _self$options = _self.options,
+        $jQBodyEle = _self$options.jQBodyEle,
+        $vProductSettingsHandler = _self$options.vProductSettingsHandler,
+        $vProductSettingsSelector = _self$options.vProductSettingsSelector;
+      var $ele = $($vProductSettingsHandler, $jQBodyEle);
+      if ($ele.length > 0) {
+        var dependencyClass = new _dependency__WEBPACK_IMPORTED_MODULE_0__["default"]();
+        dependencyClass._handler($ele, $vProductSettingsSelector);
+      }
+    }
+  }]);
+}();
+
+
+/***/ }),
+
 /***/ "./assets/source/js/admin/swatches/color.js":
 /*!**************************************************!*\
   !*** ./assets/source/js/admin/swatches/color.js ***!
@@ -319,14 +413,16 @@ var __webpack_exports__ = {};
   \*****************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-attributes-page */ "./assets/source/js/admin/product-attributes-page/index.js");
-/* harmony import */ var _swatches_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swatches/color */ "./assets/source/js/admin/swatches/color.js");
-/* harmony import */ var _swatches_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swatches/image */ "./assets/source/js/admin/swatches/image.js");
+/* harmony import */ var _settings_variable_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings/variable-product */ "./assets/source/js/admin/settings/variable-product.js");
+/* harmony import */ var _swatches_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swatches/color */ "./assets/source/js/admin/swatches/color.js");
+/* harmony import */ var _swatches_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swatches/image */ "./assets/source/js/admin/swatches/image.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
 
 
 
@@ -346,8 +442,9 @@ var AdminWPAP = /*#__PURE__*/function () {
       _self.options.jQBodyEle = $("body");
       _self.options.bodyEle = document.querySelector('body');
       new _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__["default"](_self.options);
-      new _swatches_color__WEBPACK_IMPORTED_MODULE_1__["default"](_self.options);
-      new _swatches_image__WEBPACK_IMPORTED_MODULE_2__["default"](_self.options);
+      new _swatches_color__WEBPACK_IMPORTED_MODULE_2__["default"](_self.options);
+      new _swatches_image__WEBPACK_IMPORTED_MODULE_3__["default"](_self.options);
+      new _settings_variable_product__WEBPACK_IMPORTED_MODULE_1__["default"](_self.options);
     }
   }]);
 }();

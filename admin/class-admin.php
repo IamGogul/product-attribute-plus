@@ -65,6 +65,11 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 				wp_enqueue_media();
 			}
 
+			if( $screen->id == 'woocommerce_page_wc-settings' ) {
+				$lode_js = true;
+				$js_deps = ['woocommerce_settings'];
+			}
+
 			if( $load_css ) {
 				wp_enqueue_style(
 					WPAP_CONST_PLUGIN_NAME,
@@ -91,6 +96,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
         public function load_modules() {
 
             require_once WPAP_CONST_DIR . 'admin/class-action-links.php';
+
+			require_once WPAP_CONST_DIR . 'admin/class-wc-settings-page.php';
 
             require_once WPAP_CONST_DIR . 'admin/class-wc-product-attributes.php';
 
