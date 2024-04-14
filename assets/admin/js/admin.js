@@ -5,6 +5,6 @@ var __webpack_exports__ = {};
 /*!*****************************************!*\
   !*** ./assets/source/js/admin/index.js ***!
   \*****************************************/
-alert("Hello World");
+alert("Backend");
 /******/ })()
 ;
