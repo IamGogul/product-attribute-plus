@@ -36,9 +36,39 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
 		 */
         public function __construct() {
 
+			add_filter( 'get_the_generator_html', [ $this, 'generator_tag' ], 10, 2 );
+            add_filter( 'get_the_generator_xhtml', [ $this, 'generator_tag' ], 10, 2 );
+            add_filter( 'body_class', [ $this, 'body_classes' ] );
+
             do_action( 'woo-pa-plus-action/plugin/public/loaded' );
 
         }
+
+		/**
+		 * Output generator tag to aid debugging.
+		 */
+        public function generator_tag( $gen, $type ) {
+
+            $esc_tag = sprintf(
+                /* translators: 1:Name of a theme 2: Version number of a theme 3:Name of theme author */
+                esc_attr__( '%1$s %2$s by %3$s', 'ppa' ),
+                WPAP_CONST_PLUGIN_NAME,
+                WPAP_CONST_VERSION,
+                'M Gogul Saravanan'
+            );
+
+			$gen .= "\n" . '<meta name="generator" content="'.$esc_tag.'">';
+
+            return $gen;
+		}
+
+        /**
+         * Displays the classes for the body tag
+         */
+        public function body_classes( $classes ) {
+			$classes[] = 'woo-pa-plus-free-plugin';
+			return $classes;
+		}
 
     }
 
