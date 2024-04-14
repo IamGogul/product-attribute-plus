@@ -9,7 +9,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 
 	/**
 	 * Define all actions and hooks that occur in the admin product attributes edit page.
-     * edit.php?post_type=product&page=product_attributes
+     * edit.php?post_type=product&taxonomy=***
 	 */
     class Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes {
 

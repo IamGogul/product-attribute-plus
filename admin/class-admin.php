@@ -88,6 +88,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 
             require_once WPAP_CONST_DIR . 'admin/class-wc-product-attributes.php';
 
+            require_once WPAP_CONST_DIR . 'admin/class-wc-product-attribute-type.php';
+
         }
 
     }
