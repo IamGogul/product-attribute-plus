@@ -260,6 +260,38 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
 
         }
 
+        /**
+         * Save term meta
+         * @param int    $term_id  Term ID.
+         * @param int    $tt_id    Term taxonomy ID.
+         * @param string $taxonomy Taxonomy slug.
+         * @param array  $args     Arguments passed to wp_insert_term().
+         */
+        public function save_term_meta( $term_id, $tt_id, $taxonomy, $args ) {
+
+            $attribute = woo_pa_plus_get_tax_attribute( $taxonomy );
+
+            if( is_null( $attribute )) {
+                return;
+            }
+
+            if( isset( $args['post_type'] ) && 'product' == $args['post_type'] ) {
+
+                $attribute_type = $attribute->attribute_type;
+
+                if( array_key_exists( $attribute_type, $this->product_attr_types ) ) {
+
+                    if( isset( $args[ $attribute_type ] ) ) {
+
+                        update_term_meta( $term_id, $attribute_type, sanitize_text_field( $args[ $attribute_type ] ) );
+
+                    }
+
+                }
+            }
+
+        }
+
     }
 
 }

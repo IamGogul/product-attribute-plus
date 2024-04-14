@@ -59,6 +59,12 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 				$lode_js = true;
 			}
 
+			if( strpos( $screen->id, 'edit-pa_' ) !== false ) {
+				$load_css = $lode_js = true;
+				$js_deps  = [ 'jquery', 'wp-color-picker' ];
+				wp_enqueue_media();
+			}
+
 			if( $load_css ) {
 				wp_enqueue_style(
 					WPAP_CONST_PLUGIN_NAME,

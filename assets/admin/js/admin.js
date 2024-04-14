@@ -71,6 +71,188 @@ var AdminWPAPProductAttrPage = /*#__PURE__*/function () {
 }();
 
 
+/***/ }),
+
+/***/ "./assets/source/js/admin/swatches/color.js":
+/*!**************************************************!*\
+  !*** ./assets/source/js/admin/swatches/color.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AdminWPAPColorSwatch)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var AdminWPAPColorSwatch = /*#__PURE__*/function () {
+  function AdminWPAPColorSwatch(options) {
+    _classCallCheck(this, AdminWPAPColorSwatch);
+    var _self = this;
+    _self.options = $.extend(true, {
+      colorSwatch: ".woo-pa-plus-color-picker"
+    }, options);
+    $(document).ready(function () {
+      _self._swatch();
+    });
+    $(document).ajaxComplete(_self._ajaxComplete);
+  }
+  return _createClass(AdminWPAPColorSwatch, [{
+    key: "_swatch",
+    value: function _swatch() {
+      var _self = this;
+      var $colorSwatch = _self.options.colorSwatch;
+      var $ele = $($colorSwatch);
+      if ($ele.length > 0) {
+        $ele.wpColorPicker();
+      }
+    }
+  }, {
+    key: "_ajaxComplete",
+    value: function _ajaxComplete(event, request, options) {
+      if (!options.hasOwnProperty('data')) {
+        return;
+      }
+      if (0 <= options.data.indexOf('woo-pa-plus-color-sw')) {
+        if (request && 4 === request.readyState && 200 === request.status && options.data && 0 <= options.data.indexOf('action=add-tag')) {
+          var $res = wpAjax.parseAjaxResponse(request.responseXML, 'ajax-response');
+          if (!$res || $res.errors) {
+            return;
+          }
+        }
+        $(".wp-color-result").removeAttr('style');
+        $(".wp-picker-clear").trigger('click');
+      }
+    }
+  }]);
+}();
+
+
+/***/ }),
+
+/***/ "./assets/source/js/admin/swatches/image.js":
+/*!**************************************************!*\
+  !*** ./assets/source/js/admin/swatches/image.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AdminWPAPImageSwatch)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var AdminWPAPImageSwatch = /*#__PURE__*/function () {
+  function AdminWPAPImageSwatch(options) {
+    _classCallCheck(this, AdminWPAPImageSwatch);
+    var _self = this;
+    _self.options = $.extend(true, {
+      imgSwatchBtn: ".attribute-screen.woo-pa-plus-sw-image-button",
+      imgSwatchRemoveBtn: ".attribute-screen.woo-pa-plus-sw-image-img-remove"
+    }, options);
+    $(document).ready(function () {
+      _self.options.jQBodyEle = $("body");
+      _self._init();
+    });
+    $(document).ajaxComplete(_self._ajaxComplete);
+  }
+  return _createClass(AdminWPAPImageSwatch, [{
+    key: "_init",
+    value: function _init() {
+      var _self = this;
+      var _self$options = _self.options,
+        $imgSwatchBtn = _self$options.imgSwatchBtn,
+        $imgSwatchRemoveBtn = _self$options.imgSwatchRemoveBtn;
+      _self._imgSwatchBtnHandler($imgSwatchBtn);
+      _self._imgSwatchRemoveHandler($imgSwatchRemoveBtn);
+    }
+  }, {
+    key: "_imgSwatchBtnHandler",
+    value: function _imgSwatchBtnHandler($ele) {
+      var $frame;
+      $("body").on("click", $ele, function ($event) {
+        $event.preventDefault();
+        var $el = $(this);
+
+        // If the media frame already exists, reopen it.
+        if ($frame) {
+          $frame.open();
+          return;
+        }
+
+        // Create the media frame.
+        $frame = wp.media({
+          title: $el.data('title'),
+          multiple: false,
+          library: {
+            type: 'image'
+          },
+          button: {
+            text: $el.data('button')
+          }
+        });
+
+        // When an image is selected, run a callback.
+        $frame.on("select", function () {
+          var $attachment = $frame.state().get('selection').first().toJSON(),
+            $attachment_image = $attachment.sizes.thumbnail ? $attachment.sizes.thumbnail.url : $attachment.url;
+          var $attachment_id = $attachment.id,
+            $image_html = '<div class="woo-pa-plus-sw-image-img-holder">' + '<div class="woo-pa-plus-sw-image-img">' + '<img src="' + $attachment_image + '"/>' + '<a href="javascript:void(0);" class="attribute-screen woo-pa-plus-sw-image-img-remove" title="' + $el.data('remove') + '"></a>' + '</div>';
+          '</div>';
+          $el.siblings('input.woo-pa-plus-sw-image-id').val($attachment_id);
+          $($image_html).insertBefore($el.parent());
+          setTimeout(function () {
+            $el.addClass('hidden');
+          }, 10);
+        });
+
+        // Finally, open the modal.
+        $frame.open();
+      });
+    }
+  }, {
+    key: "_imgSwatchRemoveHandler",
+    value: function _imgSwatchRemoveHandler($ele) {
+      $("body").on("click", $ele, function ($event) {
+        $event.preventDefault();
+        var $el = $(this),
+          $imgPicker = $el.parents(".woo-pa-plus-sw-image-img-holder").next(".woo-pa-plus-sw-image-img-picker");
+        $imgPicker.find(".woo-pa-plus-sw-image-id").val("");
+        $imgPicker.find(".woo-pa-plus-sw-image-button").removeClass("hidden");
+        $el.parents(".woo-pa-plus-sw-image-img-holder").remove();
+      });
+    }
+  }, {
+    key: "_ajaxComplete",
+    value: function _ajaxComplete(event, request, options) {
+      if (!options.hasOwnProperty('data')) {
+        return;
+      }
+      console.log(options.data);
+      if (0 <= options.data.indexOf('woo-pa-plus-image-sw')) {
+        if (request && 4 === request.readyState && 200 === request.status && options.data && 0 <= options.data.indexOf('action=add-tag')) {
+          var $res = wpAjax.parseAjaxResponse(request.responseXML, 'ajax-response');
+          if (!$res || $res.errors) {
+            return;
+          }
+          $('input.woo-pa-plus-sw-image-id').val('');
+          $('.woo-pa-plus-sw-image-img-holder').remove();
+          $('.woo-pa-plus-sw-image-button').removeClass("hidden");
+        }
+      }
+    }
+  }]);
+}();
+
+
 /***/ })
 
 /******/ 	});
@@ -137,12 +319,16 @@ var __webpack_exports__ = {};
   \*****************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-attributes-page */ "./assets/source/js/admin/product-attributes-page/index.js");
+/* harmony import */ var _swatches_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swatches/color */ "./assets/source/js/admin/swatches/color.js");
+/* harmony import */ var _swatches_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swatches/image */ "./assets/source/js/admin/swatches/image.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
 
 var AdminWPAP = /*#__PURE__*/function () {
   function AdminWPAP(options) {
@@ -160,6 +346,8 @@ var AdminWPAP = /*#__PURE__*/function () {
       _self.options.jQBodyEle = $("body");
       _self.options.bodyEle = document.querySelector('body');
       new _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__["default"](_self.options);
+      new _swatches_color__WEBPACK_IMPORTED_MODULE_1__["default"](_self.options);
+      new _swatches_image__WEBPACK_IMPORTED_MODULE_2__["default"](_self.options);
     }
   }]);
 }();
