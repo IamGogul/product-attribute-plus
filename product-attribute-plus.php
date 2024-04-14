@@ -104,7 +104,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small'  => esc_html__( 'Small', 'pap' ),
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-medium' => esc_html__( 'Medium', 'pap' ),
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-large'  => esc_html__( 'Large', 'pap' ),
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Large', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Extra Large', 'pap' ),
 			]);
 
 			$this->swatch_shapes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/shapes', [
