@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
                     test   : /\.js$/,
                     // Exclude the node_modules folder.
                     exclude: /node_modules/,
-                    include: path.resolve(__dirname, 'src'),
+                    include: path.resolve(__dirname, 'assets/source'),
                     use    :  {
                         loader: 'babel-loader',
                         options: {
