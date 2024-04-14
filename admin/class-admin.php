@@ -36,10 +36,51 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Admin' ) ) {
 		 */
         public function __construct() {
 
+			add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 100 );
+
             $this->load_modules();
             do_action( 'woo-pa-plus-action/plugin/admin/loaded' );
 
         }
+
+		public function enqueue_scripts() {
+			$load_css = $lode_js = false;
+			$screen   = get_current_screen();
+			$js_deps  = [ 'jquery' ];
+			$css_deps = [ 'wp-color-picker' ];
+			$localize = [
+				'ajax'          => esc_url( admin_url('admin-ajax.php') ),
+				'pluginName'    => WPAP_CONST_PLUGIN_NAME,
+				'pluginSanName' => WPAP_CONST_SAN_PLUGIN_NAME,
+				'pluginVersion' => WPAP_CONST_VERSION,
+            ];
+
+			if( $screen->id == 'product_page_product_attributes' ) {
+				$lode_js = true;
+			}
+
+			if( $load_css ) {
+				wp_enqueue_style(
+					WPAP_CONST_PLUGIN_NAME,
+					WPAP_CONST_URL . 'assets/admin/css/style' . WPAP_CONST_DEBUG_SUFFIX . '.css',
+					$css_deps,
+					WPAP_CONST_VERSION,
+					'all'
+				);
+			}
+
+			if( $lode_js ) {
+				wp_enqueue_script(
+					WPAP_CONST_PLUGIN_NAME,
+					WPAP_CONST_URL . 'assets/admin/js/admin' . WPAP_CONST_DEBUG_SUFFIX . '.js',
+					$js_deps,
+					WPAP_CONST_VERSION,
+					false
+				);
+			}
+
+			wp_localize_script( 'jquery', 'woo_pa_plus_plugin_L10n',apply_filters( 'woo-pa-plus-filter/plugin/admin/L10n', $localize )  );
+		}
 
         public function load_modules() {
 

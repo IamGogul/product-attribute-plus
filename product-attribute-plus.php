@@ -150,7 +150,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
             $this->define( 'WPAP_CONST_DIR', trailingslashit( plugin_dir_path( WPAP_CONST_FILE ) ) );
 			$this->define( 'WPAP_CONST_URL', trailingslashit( plugin_dir_url( WPAP_CONST_FILE ) ) );
 			$this->define( 'WPAP_CONST_BASENAME', plugin_basename( WPAP_CONST_FILE ) );
-			$this->define( 'WPAP_CONST_DEBUG_SUFFIX', ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' ) );
+			$this->define( 'WPAP_CONST_DEBUG_SUFFIX', ( defined( 'WPAP_SCRIPT_DEBUG' ) && WPAP_SCRIPT_DEBUG ? '' : '.min' ) );
         }
 
 		/**
