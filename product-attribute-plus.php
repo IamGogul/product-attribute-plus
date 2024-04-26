@@ -246,6 +246,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 						wp_kses_post( $button ), /* sanitized & filtered var $button */
 					);
                 });
+
+				return false;
             }
 
             return true;
