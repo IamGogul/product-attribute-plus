@@ -48,6 +48,12 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Action_Links' ) ) {
 
             if( WPAP_CONST_BASENAME === $plugin_file ) {
 
+				$new_actions['settings'] = sprintf(
+                    '<a href="%1$s">%2$s</a>',
+					esc_url( admin_url( add_query_arg( [ 'page' => 'wc-settings', 'tab' => WPAP_CONST_SETTINGS_TAB_ID ], 'admin.php' ) ) ),
+					esc_html__( 'Settings', 'pap' )
+				);
+
 				$new_actions['add-swatch'] = sprintf(
                     '<a href="%1$s">%2$s</a>',
 					esc_url( admin_url( add_query_arg([ 'post_type' => 'product', 'page' => 'product_attributes' ], 'edit.php' ) ) ),
