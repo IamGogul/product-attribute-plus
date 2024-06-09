@@ -4,7 +4,7 @@
  *
  * Plugin Name: Product Attribute Plus
  * Plugin URI:  https://wordpress.org/plugins/product-attribute-plus
- * Description: A free WooCommerce extender plugin that expands product attribute options. It ads Color, Label, and Image Swatches alongside the standard dropdown menu.
+ * Description: A free WooCommerce extender plugin that expands product attribute options. It adds Color, Label, and Image Swatches along side the standard dropdown menu.
  * Version: 1.0.0
  * Author: 🎖️ M Gogul Saravanan
  * Author URI: https://profiles.wordpress.org/iamgogul/
@@ -96,7 +96,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 				'woo-pa-plus-color-sw' => esc_html__( 'Color Swatch', 'pap' ),
 				'woo-pa-plus-image-sw' => esc_html__( 'Image Swatch', 'pap' ),
 				'woo-pa-plus-label-sw' => esc_html__( 'Label Swatch', 'pap' ),
-				'woo-pa-plus-radio-btn' => esc_html__( 'Radio Button', 'pap' ),
+				'woo-pa-plus-radio'    => esc_html__( 'Radio Button', 'pap' ),
 			]);
 
 			$this->swatch_sizes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/sizes', [
