@@ -40,6 +40,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
             add_filter( 'get_the_generator_xhtml', [ $this, 'generator_tag' ], 10, 2 );
             add_filter( 'body_class', [ $this, 'body_classes' ] );
 
+			$this->load_modules();
+
             do_action( 'woo-pa-plus-action/plugin/public/loaded' );
 
         }
@@ -68,6 +70,15 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
         public function body_classes( $classes ) {
 			$classes[] = 'woo-pa-plus-free-plugin';
 			return $classes;
+		}
+
+        /**
+         * Load the required dependencies.
+         */
+		public function load_modules() {
+
+            require_once WPAP_CONST_DIR . 'public/class-wc-single-variable-product.php';
+
 		}
 
     }
