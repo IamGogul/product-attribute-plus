@@ -40,6 +40,9 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
             add_filter( 'get_the_generator_xhtml', [ $this, 'generator_tag' ], 10, 2 );
             add_filter( 'body_class', [ $this, 'body_classes' ] );
 
+			add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ], 10 );
+            add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_vars' ], 20 );
+
 			$this->load_modules();
 
             do_action( 'woo-pa-plus-action/plugin/public/loaded' );
@@ -70,6 +73,78 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
         public function body_classes( $classes ) {
 			$classes[] = 'woo-pa-plus-free-plugin';
 			return $classes;
+		}
+
+		public function enqueue_scripts() {
+
+			/**
+			 * Style
+			 */
+				wp_enqueue_style(
+					WPAP_CONST_SAN_PLUGIN_NAME,
+					WPAP_CONST_URL . 'assets/public/css/style' . WPAP_CONST_DEBUG_SUFFIX . '.css',
+					[],
+					WPAP_CONST_VERSION,
+					'all'
+				);
+
+			/**
+			 * Script
+			 */
+				wp_enqueue_script(
+					WPAP_CONST_SAN_PLUGIN_NAME,
+					WPAP_CONST_URL . 'assets/public/js/public' . WPAP_CONST_DEBUG_SUFFIX . '.js',
+					[ 'wc-add-to-cart-variation','jquery' ],
+					WPAP_CONST_VERSION,
+					[ 'strategy'  => 'defer', 'in_footer' => true, ]
+				);
+
+			/**
+			 * Localize
+			 */
+				$localize = [
+					'ajax'                    => esc_url( admin_url('admin-ajax.php') ),
+					'pluginName'              => WPAP_CONST_PLUGIN_NAME,
+					'pluginSanName'           => WPAP_CONST_SAN_PLUGIN_NAME,
+					'pluginVersion'           => WPAP_CONST_VERSION,
+					"is_singular_product"     => is_singular( 'product'),
+				];
+				wp_localize_script( 'jquery', 'woo_pa_plus_plugin_L10n', apply_filters( 'woo-pa-plus-filter/plugin/l10n', $localize ) );
+
+		}
+
+		public function enqueue_vars() {
+			$static_css_vars_stylesheet = woo_pa_plus_is_var_style_exists();
+
+			if( is_null( $static_css_vars_stylesheet ) ) {
+				/**
+				 * CSS Variables
+				 */
+				$vars = '';
+
+				/**
+				 * Single Variable Product
+				 */
+					$vproduct_swatch_border_color        = get_option( 'woo_pap_vproduct_swatch_border_color', '#dddddd' );
+					$vproduct_swatch_active_border_color = get_option( 'woo_pap_vproduct_swatch_active_border_color', '#ff0000' );
+					$vproduct_swatch_hover_border_color  = get_option( 'woo_pap_vproduct_swatch_hover_border_color', '#000000' );
+
+					$vars .= sprintf('--woo-pap-swatch-border-color:%1$s;%2$s', $vproduct_swatch_border_color, "\n" );
+					$vars .= sprintf('--woo-pap-swatch-active-border-color:%1$s;%2$s', $vproduct_swatch_active_border_color, "\n" );
+					$vars .= sprintf('--woo-pap-swatch-hover-border-color:%1$s;%2$s', $vproduct_swatch_hover_border_color, "\n" );
+
+				if( !empty( $vars ) ) {
+					$css = sprintf(
+						esc_html__('/* Create a file %s in active theme and add the below css in it. */', 'pap' ),
+						'woo-pa-plus-css-vars.css'
+					);
+
+					$css .= sprintf('%1$s :root{%1$s%2$s}', "\n", $vars );
+					wp_add_inline_style( WPAP_CONST_SAN_PLUGIN_NAME, $css );
+				}
+			} else {
+				wp_enqueue_style( 'woo-pa-plus-css-vars', $static_css_vars_stylesheet, [], WPAP_CONST_VERSION, 'all' );
+			}
 		}
 
         /**

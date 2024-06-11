@@ -239,9 +239,13 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 							$html .= sprintf(
 								'<li class="%1$s">
 									<div class="woo-pa-plus-sw-wrap">
-										<label class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">
-											<input type="radio" name="attribute_%5$s" value="%3$s"> %4$s
-										</label>
+										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">
+											%4$s
+											<!-- <label for="woo-pa-plus-swatch-attr-%2$s">
+												<input id="woo-pa-plus-swatch-attr-%2$s" type="radio" name="attribute_%5$s" value="%3$s">
+												%4$s
+											</label> -->
+										</span>
 									</div>
 								</li>',
 								esc_attr( $class ),

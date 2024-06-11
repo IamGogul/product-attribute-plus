@@ -167,7 +167,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Settings_Page' ) ) {
                     [
                         'title'    => esc_html__( 'Swatch Border Color', 'pap' ),
                         'desc'     => esc_html__( 'Set the border color of the swatch.', 'pap' ),
-                        'id'       => 'kfwoo_vproduct_swatch_border_color',
+                        'id'       => 'woo_pap_vproduct_swatch_border_color',
                         'type'     => 'color',
                         'css'      => 'width:6em;',
                         'default'  => '#dddddd',

@@ -17,7 +17,8 @@
 		"js:w:prod": "webpack --mode=production --watch --config webpack.config.js",
 
 		"js:dev": "webpack --mode=development --config webpack.config.js",
-		"js:prod": "webpack --mode=production --config webpack.config.js"
+		"js:prod": "webpack --mode=production --config webpack.config.js",
+		"js": "npm run js:dev && npm run js:prod"
 	},
 	"author": "M.Gogul Saravanan",
 	"license": "ISC",
