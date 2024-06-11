@@ -4,10 +4,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/source/js/admin/product-attributes-page/index.js":
-/*!*****************************************************************!*\
-  !*** ./assets/source/js/admin/product-attributes-page/index.js ***!
-  \*****************************************************************/
+/***/ "./assets/src/js/admin/product-attributes-page/index.js":
+/*!**************************************************************!*\
+  !*** ./assets/src/js/admin/product-attributes-page/index.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -73,10 +73,10 @@ var AdminWPAPProductAttrPage = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/source/js/admin/settings/dependency.js":
-/*!*******************************************************!*\
-  !*** ./assets/source/js/admin/settings/dependency.js ***!
-  \*******************************************************/
+/***/ "./assets/src/js/admin/settings/dependency.js":
+/*!****************************************************!*\
+  !*** ./assets/src/js/admin/settings/dependency.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -114,17 +114,17 @@ var AdminWPAPSettingsDependency = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/source/js/admin/settings/variable-product.js":
-/*!*************************************************************!*\
-  !*** ./assets/source/js/admin/settings/variable-product.js ***!
-  \*************************************************************/
+/***/ "./assets/src/js/admin/settings/variable-product.js":
+/*!**********************************************************!*\
+  !*** ./assets/src/js/admin/settings/variable-product.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ AdminWPAPVariableProductSettings)
 /* harmony export */ });
-/* harmony import */ var _dependency__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dependency */ "./assets/source/js/admin/settings/dependency.js");
+/* harmony import */ var _dependency__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dependency */ "./assets/src/js/admin/settings/dependency.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -167,10 +167,10 @@ var AdminWPAPVariableProductSettings = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/source/js/admin/swatches/color.js":
-/*!**************************************************!*\
-  !*** ./assets/source/js/admin/swatches/color.js ***!
-  \**************************************************/
+/***/ "./assets/src/js/admin/swatches/color.js":
+/*!***********************************************!*\
+  !*** ./assets/src/js/admin/swatches/color.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -228,10 +228,10 @@ var AdminWPAPColorSwatch = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/source/js/admin/swatches/image.js":
-/*!**************************************************!*\
-  !*** ./assets/source/js/admin/swatches/image.js ***!
-  \**************************************************/
+/***/ "./assets/src/js/admin/swatches/image.js":
+/*!***********************************************!*\
+  !*** ./assets/src/js/admin/swatches/image.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -408,14 +408,14 @@ var AdminWPAPImageSwatch = /*#__PURE__*/function () {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*****************************************!*\
-  !*** ./assets/source/js/admin/index.js ***!
-  \*****************************************/
+/*!**************************************!*\
+  !*** ./assets/src/js/admin/index.js ***!
+  \**************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-attributes-page */ "./assets/source/js/admin/product-attributes-page/index.js");
-/* harmony import */ var _settings_variable_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings/variable-product */ "./assets/source/js/admin/settings/variable-product.js");
-/* harmony import */ var _swatches_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swatches/color */ "./assets/source/js/admin/swatches/color.js");
-/* harmony import */ var _swatches_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swatches/image */ "./assets/source/js/admin/swatches/image.js");
+/* harmony import */ var _product_attributes_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-attributes-page */ "./assets/src/js/admin/product-attributes-page/index.js");
+/* harmony import */ var _settings_variable_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./settings/variable-product */ "./assets/src/js/admin/settings/variable-product.js");
+/* harmony import */ var _swatches_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swatches/color */ "./assets/src/js/admin/swatches/color.js");
+/* harmony import */ var _swatches_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swatches/image */ "./assets/src/js/admin/swatches/image.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }

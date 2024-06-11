@@ -3,13 +3,15 @@
 	"version": "1.0.0",
 	"description": "WooCommerce Product Attribute Plus WordPress Plugin",
 	"scripts": {
-		"scss:admin": "node-sass assets/source/scss/admin/ -o assets/admin/css --output-style expanded",
-		"scss:admin:min": "node-sass assets/source/scss/admin/ -o assets/admin/css --output-style compressed",
-		"scss:admin:watch": "node-sass --recursive -w assets/source/scss/admin/ -o assets/admin/css --output-style expanded",
+		"scss:admin": "node-sass assets/src/scss/admin/ -o assets/admin/css --output-style expanded",
+		"scss:admin:minify": "node-sass assets/src/scss/admin/ -o assets/admin/css --output-style compressed",
+		"scss:admin:min": "npm run scss:admin:minify && node clone.admin.js && npm run scss:admin",
+		"scss:admin:watch": "node-sass --recursive -w assets/src/scss/admin/ -o assets/admin/css --output-style expanded",
 
-		"scss:public": "node-sass src/scss/public/ -o assets/public/css --output-style expanded",
-		"scss:public:min": "node-sass src/scss/public/ -o assets/public/css --output-style compressed",
-		"scss:public:watch": "node-sass --recursive -w src/scss/public/ -o assets/public/css --output-style expanded",
+		"scss:public": "node-sass assets/src/scss/public/ -o assets/public/css --output-style expanded",
+		"scss:public:minify": "node-sass assets/src/scss/public/ -o assets/public/css --output-style compressed",
+		"scss:public:min": "npm run scss:public:minify && node clone.public.js && npm run scss:public",
+		"scss:public:watch": "node-sass --recursive -w assets/src/scss/public/ -o assets/public/css --output-style expanded",
 
 		"js:w:dev": "webpack --mode=development --watch --config webpack.config.js",
 		"js:w:prod": "webpack --mode=production --watch --config webpack.config.js",

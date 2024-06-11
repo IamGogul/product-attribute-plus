@@ -8,8 +8,8 @@ module.exports = (env, argv) => {
     const outputFilenameExtension = mode === 'production' ? '.min.js' : '.js';
 
     const entries = {
-		admin : './assets/source/js/admin/index.js',
-		public: './assets/source/js/public/index.js',
+		admin : './assets/src/js/admin/index.js',
+		public: './assets/src/js/public/index.js',
     };
 
     return {
@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
                     test   : /\.js$/,
                     // Exclude the node_modules folder.
                     exclude: /node_modules/,
-                    include: path.resolve(__dirname, 'assets/source'),
+                    include: path.resolve(__dirname, 'assets/src'),
                     use    :  {
                         loader: 'babel-loader',
                         options: {
