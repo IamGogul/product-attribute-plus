@@ -53,7 +53,6 @@ var PublicWPAPSingleProduct = /*#__PURE__*/function () {
           $name = $this.data("name"),
           $value = $this.data("value"),
           $li = $this.parents("li");
-        $utils._console($select);
         var $hasSelected = $utils._isBool($utils._hasState($li, 'selected'));
         if ($hasSelected) {
           $utils._removeState($li, 'selected');
