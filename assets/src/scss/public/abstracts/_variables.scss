@@ -1,0 +1,7 @@
+// Display Flex Center
+@mixin flexCenter($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
