@@ -85,7 +85,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Products' ) ) {
                 data-orderby              = "%3$s"
                 data-taxonomy             = "%4$s">',
                 esc_attr( $index ),
-                esc_attr__( 'Select terms', 'product-attribut-plus'),
+                esc_attr__( 'Select terms', 'product-attribute-plus'),
                 esc_attr( $attribute_orderby ),
                 esc_attr( $attribute->get_taxonomy() )
             );
@@ -109,11 +109,11 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Products' ) ) {
                 <button class="button plus select_all_attributes"> %1$s </button>
                 <button class="button minus select_no_attributes"> %2$s </button>
                 <!-- <button class="button fr plus js-woo-pap-add-new-attribute" data-type="%3$s" data-taxonomy="%4$s">%5$s</button> -->',
-                esc_html__( 'Select all', 'product-attribut-plus' ),
-                esc_html__( 'Select none', 'product-attribut-plus' ),
+                esc_html__( 'Select all', 'product-attribute-plus' ),
+                esc_html__( 'Select none', 'product-attribute-plus' ),
                 esc_attr( $attribute_type ),
                 esc_attr( $attribute->get_taxonomy() ),
-                esc_html__( 'Add new', 'product-attribut-plus' )
+                esc_html__( 'Add new', 'product-attribute-plus' )
             );
 
         }

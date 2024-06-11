@@ -135,7 +135,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
 
 				if( !empty( $vars ) ) {
 					$css = sprintf(
-						esc_html__('/* Create a file %s in active theme and add the below css in it. */', 'product-attribut-plus' ),
+						/* translators: %s: woo-pa-plus-css-vars.css - a stylesheet file name */
+						esc_html__('/* Create a file %s in active theme and add the below css in it. */', 'product-attribute-plus' ),
 						'woo-pa-plus-css-vars.css'
 					);
 

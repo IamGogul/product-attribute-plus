@@ -51,13 +51,13 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Action_Links' ) ) {
 				$new_actions['settings'] = sprintf(
                     '<a href="%1$s">%2$s</a>',
 					esc_url( admin_url( add_query_arg( [ 'page' => 'wc-settings', 'tab' => WPAP_CONST_SETTINGS_TAB_ID ], 'admin.php' ) ) ),
-					esc_html__( 'Settings', 'product-attribut-plus' )
+					esc_html__( 'Settings', 'product-attribute-plus' )
 				);
 
 				$new_actions['add-swatch'] = sprintf(
                     '<a href="%1$s">%2$s</a>',
 					esc_url( admin_url( add_query_arg([ 'post_type' => 'product', 'page' => 'product_attributes' ], 'edit.php' ) ) ),
-					esc_html__( 'Add Swatch', 'product-attribut-plus' )
+					esc_html__( 'Add Swatch', 'product-attribute-plus' )
 				);
 
             }
@@ -74,14 +74,14 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Action_Links' ) ) {
 				$new_meta ['docs'] = sprintf(
                     '<a href="%1$s" target="_blank">📙 %2$s</a>',
 					esc_url( 'plugins.gogul.pro/product-attribute-plus' ),
-					esc_html__( 'Documentation', 'product-attribut-plus' )
+					esc_html__( 'Documentation', 'product-attribute-plus' )
                 );
 
 
 				$new_meta ['support'] = sprintf(
 					'<a href="%1$s" target="_blank">🤚🏾 %2$s</a>',
 					esc_url( '//wordpress.org/support/plugin/product-attribute-plus' ),
-					esc_html__( 'Support', 'product-attribut-plus' )
+					esc_html__( 'Support', 'product-attribute-plus' )
 				);
             }
 

@@ -228,7 +228,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
                                 </div>
                             </div>',
                             esc_url( $image ),
-                            esc_attr__( 'Remove Image', 'product-attribut-plus' ),
+                            esc_attr__( 'Remove Image', 'product-attribute-plus' ),
                         );
                     }
 
@@ -239,11 +239,11 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
                         </div>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value ),
-                        esc_attr__( 'Choose an Image', 'product-attribut-plus' ),
-                        esc_attr__( 'Set Image', 'product-attribut-plus' ),
-                        esc_attr__( 'Remove Image', 'product-attribut-plus' ),
+                        esc_attr__( 'Choose an Image', 'product-attribute-plus' ),
+                        esc_attr__( 'Set Image', 'product-attribute-plus' ),
+                        esc_attr__( 'Remove Image', 'product-attribute-plus' ),
                         'edit' == ( $mode && !empty( $attribute_value ) ) ? 'hidden' : '',
-                        esc_attr__( 'Add Image', 'product-attribut-plus' ),
+                        esc_attr__( 'Add Image', 'product-attribute-plus' ),
                     );
                 break;
 
