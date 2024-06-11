@@ -13,4 +13,4 @@ License:     GPLv2 or later
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 == Description ==
-ProductAttribute Plus is a free WooCommerce plugin that expands product attribute options. It ads Color, Label, and Image Swatches alongside the standard dropdown menu.
+Product Attribute Plus is a free WooCommerce plugin that expands product attribute options. It ads Color, Label, and Image Swatches alongside the standard dropdown menu.

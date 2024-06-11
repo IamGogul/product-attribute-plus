@@ -46,7 +46,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_i18n' ) ) {
 		 */
 		public function load_plugin_textdomain() {
 
-			load_plugin_textdomain( 'pap', false, plugin_basename( dirname( WPAP_CONST_DIR ) ) . '/languages');
+			load_plugin_textdomain( 'product-attribut-plus', false, plugin_basename( dirname( WPAP_CONST_DIR ) ) . '/languages');
 
 		}
 

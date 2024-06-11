@@ -10,7 +10,7 @@
  * Author URI: https://profiles.wordpress.org/iamgogul/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Text Domain: pap
+ * Text Domain: product-attribut-plus
  * Domain Path: /languages
  */
 
@@ -109,30 +109,30 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
         public function __construct() {
 
 			$this->product_attr_types = apply_filters( 'woo-pa-plus-filter/plugin/product-attr-types', [
-				'woo-pa-plus-color-sw' => esc_html__( 'Color Swatch', 'pap' ),
-				'woo-pa-plus-image-sw' => esc_html__( 'Image Swatch', 'pap' ),
-				'woo-pa-plus-label-sw' => esc_html__( 'Label Swatch', 'pap' ),
-				'woo-pa-plus-radio'    => esc_html__( 'Radio Button', 'pap' ),
+				'woo-pa-plus-color-sw' => esc_html__( 'Color Swatch', 'product-attribut-plus' ),
+				'woo-pa-plus-image-sw' => esc_html__( 'Image Swatch', 'product-attribut-plus' ),
+				'woo-pa-plus-label-sw' => esc_html__( 'Label Swatch', 'product-attribut-plus' ),
+				'woo-pa-plus-radio'    => esc_html__( 'Radio Button', 'product-attribut-plus' ),
 			]);
 
 			$this->swatch_sizes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/sizes', [
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-tiny'   => esc_html__( 'Tiny', 'pap' ),
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small'  => esc_html__( 'Small', 'pap' ),
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-medium' => esc_html__( 'Medium', 'pap' ),
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-large'  => esc_html__( 'Large', 'pap' ),
-                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Extra Large', 'pap' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-tiny'   => esc_html__( 'Tiny', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small'  => esc_html__( 'Small', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-medium' => esc_html__( 'Medium', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-large'  => esc_html__( 'Large', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Extra Large', 'product-attribut-plus' ),
 			]);
 
 			$this->swatch_shapes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/shapes', [
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-circle'         => esc_html__( 'Circle', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-diamond'        => esc_html__( 'Diamond', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-heart'          => esc_html__( 'Heart', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-hexagon'        => esc_html__( 'Hexagon', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-pentagon'       => esc_html__( 'Pentagon', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-rounded-square' => esc_html__( 'Rounded Square', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square'         => esc_html__( 'Square', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-star'           => esc_html__( 'Star', 'pap' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-triangle'       => esc_html__( 'Triangle', 'pap' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-circle'         => esc_html__( 'Circle', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-diamond'        => esc_html__( 'Diamond', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-heart'          => esc_html__( 'Heart', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-hexagon'        => esc_html__( 'Hexagon', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-pentagon'       => esc_html__( 'Pentagon', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-rounded-square' => esc_html__( 'Rounded Square', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square'         => esc_html__( 'Square', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-star'           => esc_html__( 'Star', 'product-attribut-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-triangle'       => esc_html__( 'Triangle', 'product-attribut-plus' ),
 			]);
 
             $this->define_constants();
@@ -169,7 +169,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 			$this->define( 'WPAP_CONST_DEBUG_SUFFIX', ( defined( 'WPAP_SCRIPT_DEBUG' ) && WPAP_SCRIPT_DEBUG ? '' : '.min' ) );
 
             $this->define( 'WPAP_CONST_SETTINGS_TAB_ID', 'woo-pa-plus-settings' );
-            $this->define( 'WPAP_CONST_SETTINGS_TAB_NAME', esc_html__( '🎖️ Swatches', 'pap' ) );
+            $this->define( 'WPAP_CONST_SETTINGS_TAB_NAME', esc_html__( '🎖️ Swatches', 'product-attribut-plus' ) );
 
         }
 
@@ -220,7 +220,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
                 add_action( 'admin_notices', function(){
                     /* translators: %s: html tags */
                     $message = sprintf(
-                        esc_html__( 'The %1$s Product Attribute Plus %2$s plugin requires %1$sWooCommerce%2$s plugin. Kindly install and activate it.', 'pap' ),
+                        esc_html__( 'The %1$s Product Attribute Plus %2$s plugin requires %1$sWooCommerce%2$s plugin. Kindly install and activate it.', 'product-attribut-plus' ),
                         '<strong>',
                         '</strong>'
                     );
@@ -240,7 +240,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 								) ),
 								'activate-plugin_woocommerce/woocommerce.php'
 							),
-							esc_html__( 'Activate WooCommerce', 'pap' )
+							esc_html__( 'Activate WooCommerce', 'product-attribut-plus' )
 						);
 					} else if( $is_woo_installed && current_user_can( 'install_plugins' ) ) {
 						$button = sprintf( '<a href="%1$s" class="button-primary">%2$s</a>',
@@ -252,7 +252,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 								) ),
 								'install-plugin_woocommerce'
 							),
-							esc_html__( 'Install WooCommerce', 'pap' )
+							esc_html__( 'Install WooCommerce', 'product-attribut-plus' )
                         );
                     }
 
