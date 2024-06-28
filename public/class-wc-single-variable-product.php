@@ -145,13 +145,18 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 		 */
 		public function swatch_html( $html, $attribute_type, $attribute_name, $terms, $options, $selected, $settings ) {
 
-			$class = implode( ' ', [
+			$class = [
 				'woo-pa-plus-swatch',
 				$attribute_type,
 				$settings['size'],
 				$settings['shape'],
-			] );
+			];
 
+			if( $attribute_type === 'woo-pa-plus-radio' ) {
+				unset( $class[2], $class[3] );
+			}
+
+			$class = implode( ' ', $class );
             $html .= sprintf( '<ul class="%1$s" data-attribute="%2$s">', esc_attr( $class ), $attribute_name  );
 
             switch ( $attribute_type ) {
@@ -241,10 +246,6 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 									<div class="woo-pa-plus-sw-wrap">
 										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">
 											%4$s
-											<!-- <label for="woo-pa-plus-swatch-attr-%2$s">
-												<input id="woo-pa-plus-swatch-attr-%2$s" type="radio" name="attribute_%5$s" value="%3$s">
-												%4$s
-											</label> -->
 										</span>
 									</div>
 								</li>',

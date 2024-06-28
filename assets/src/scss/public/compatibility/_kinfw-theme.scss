@@ -1,0 +1,17 @@
+.kinfw-theme {
+    .kinfw-single-product .kinfw-single-product-info-wrap .variations_form {
+        .woo-pa-plus-variation-select+.select2-container {
+            display: none;
+        }
+        .reset_variations {
+            margin: 0;
+            font-size: 16px;
+            font-family: var(--kinfw-primary-font-family);
+            color: var(--kinfw-light-text-color);
+            text-decoration: none;
+            &:hover {
+                color: var(--kinfw-secondary-color);
+            }
+        }
+    }
+}

@@ -2,3 +2,8 @@
 @import "abstracts/variables";
 
 @import "single-variable-product";
+
+/* Compatibility */
+@import "compatibility/kinfw-theme";
+@import "compatibility/oceanwp";
+@import "compatibility/storefront";

@@ -124,15 +124,13 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
 			]);
 
 			$this->swatch_shapes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/shapes', [
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-bevel'          => esc_html__( 'Bevel', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-circle'         => esc_html__( 'Circle', 'product-attribute-plus' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-diamond'        => esc_html__( 'Diamond', 'product-attribute-plus' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-heart'          => esc_html__( 'Heart', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-hexagon'        => esc_html__( 'Hexagon', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-pentagon'       => esc_html__( 'Pentagon', 'product-attribute-plus' ),
+                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-rabbet'         => esc_html__( 'Rabbet', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-rounded-square' => esc_html__( 'Rounded Square', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square'         => esc_html__( 'Square', 'product-attribute-plus' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-star'           => esc_html__( 'Star', 'product-attribute-plus' ),
-                'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-triangle'       => esc_html__( 'Triangle', 'product-attribute-plus' ),
 			]);
 
             $this->define_constants();

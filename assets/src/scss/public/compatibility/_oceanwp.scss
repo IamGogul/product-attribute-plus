@@ -1,0 +1,8 @@
+body.theme-oceanwp {
+    &.single-product {
+        .woo-pa-plus-variation-select {
+            display: none !important;
+        }
+    }
+}
+
