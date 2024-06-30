@@ -43,6 +43,8 @@ Product Attribute Plus works with any theme, including:
 * Storefront
 * WordPress Default themes
 
+== Screenshots ==
+
 == Changelog ==
 = 1.0.0 =
 *   Initial release
