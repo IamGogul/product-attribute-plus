@@ -54,7 +54,7 @@ if( !function_exists( 'woo_pa_plus_get_tax_attribute' ) ) {
 			$attr
 		);
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery,  WordPress.DB.DirectDatabaseQuery.NoCaching
 		$attr = $wpdb->get_row($query);
 
 		return $attr;

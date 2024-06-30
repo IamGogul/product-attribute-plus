@@ -93,7 +93,10 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 					<p class="description"> %3$s </p>
 				</div>',
 				esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
+
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				$this->_swatch_shape_options(),
+
 				esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 			);
 
@@ -107,7 +110,10 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 					<p class="description"> %3$s </p>
 				</div>',
 				esc_html__( 'Swatch Size', 'product-attribute-plus' ),
+
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				$this->_swatch_size_options(),
+
 				esc_html__( 'Determines the size of the swatch to be displayed.', 'product-attribute-plus' )
 			);
 
@@ -156,7 +162,10 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 						</td>
 					</tr>',
 					esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
+
+					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 					$this->_swatch_shape_options( get_option( $pap_shape_key ) ),
+
 					esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 				);
 
@@ -174,7 +183,10 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 						</td>
 					</tr>',
 					esc_html__( 'Swatch Size', 'product-attribute-plus' ),
+
+					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 					$this->_swatch_size_options( get_option( $pap_size_key ) ),
+
 					esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 				);
 			}

@@ -138,8 +138,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 
             }
 
+			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
             print( $form );
-
         }
 
 		/**

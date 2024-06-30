@@ -116,6 +116,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );
+
+                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                     echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-color-sw', wp_kses_post( $field ) );
                 break;
 
@@ -129,6 +131,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
                         esc_url( $image )
                     );
 
+                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                     echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-image-sw', wp_kses_post( $field ) );
                 break;
 
@@ -138,6 +141,8 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );
+
+                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
                     echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-label-sw', wp_kses_post( $field ) );
                 break;
 
@@ -197,6 +202,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
 
             /**
              * Swatch
+             * phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
              */
             printf(
                 '<%1s class="form-field">%2s<label for="term-%3s">%4s</label>%5s',

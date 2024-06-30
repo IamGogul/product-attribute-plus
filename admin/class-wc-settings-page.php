@@ -92,7 +92,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Settings_Page' ) ) {
                     $class     = ( $current_section === $id ? 'current' : '' );
                     $separator = ( end( $array_keys ) === $id ? '' : '|' );
 
-                    printf('<li><a href="%s" class="%s">%s</a> %s</li>', $url, $class, $label, $separator );
+                    printf('<li><a href="%s" class="%s">%s</a> %s</li>', esc_url($url), esc_attr($class), esc_html($label), esc_html($separator) );
                 }
             echo '</ul><br class="clear" />';
         }
