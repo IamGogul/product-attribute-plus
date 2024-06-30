@@ -103,6 +103,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
          * Provide thumbnail HTML depend on attribute type
          */
         public function add_attribute_column_content( $columns, $column, $term_id ) {
+            // phpcs:disable WordPress.Security.NonceVerification.Recommended
             $attribute       = woo_pa_plus_get_tax_attribute( $_REQUEST['taxonomy'] );
             $attribute_type  = $attribute->attribute_type;
             $attribute_value = get_term_meta( $term_id, $attribute_type, true );
@@ -190,7 +191,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attribute_Type' ) ) 
             if( 'edit' == $mode ) {
                 printf(
                     '<input type="hidden" name="post_type" value="%1$s"/>',
-                    esc_attr( $_GET['post_type'] )
+                    esc_attr( $_GET['post_type'] ) // phpcs:disable WordPress.Security.NonceVerification.Recommended
                 );
             }
 

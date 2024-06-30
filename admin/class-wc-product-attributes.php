@@ -135,6 +135,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 
 		public function edit_attribute_fields() {
 
+			// phpcs:disable WordPress.Security.NonceVerification.Recommended
 			$edit = isset( $_GET['edit'] ) ? absint( $_GET['edit'] ) : 0;
 
 			if ( $edit > 0 ) {

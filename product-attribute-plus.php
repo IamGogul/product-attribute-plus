@@ -46,9 +46,16 @@ if( !function_exists( 'woo_pa_plus_is_plugin_active' ) ) {
 if( !function_exists( 'woo_pa_plus_get_tax_attribute' ) ) {
 	function woo_pa_plus_get_tax_attribute( $taxonomy ) {
 		global $wpdb;
+		$attr = substr($taxonomy, 3);
 
-		$attr = substr( $taxonomy, 3 );
-		$attr = $wpdb->get_row( "SELECT attribute_id, attribute_name, attribute_label, attribute_type FROM " . $wpdb->prefix . "woocommerce_attribute_taxonomies WHERE attribute_name = '$attr'" );
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		$query = $wpdb->prepare(
+			"SELECT attribute_id, attribute_name, attribute_label, attribute_type FROM {$wpdb->prefix}woocommerce_attribute_taxonomies WHERE attribute_name = %s",
+			$attr
+		);
+
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		$attr = $wpdb->get_row($query);
 
 		return $attr;
 	}

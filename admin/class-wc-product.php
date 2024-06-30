@@ -67,6 +67,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Products' ) ) {
             global $thepostid;
 
             // woCommerce 3.5.0 doesn't supports global $thepostid
+            // phpcs:disable WordPress.Security.NonceVerification.Missing
             if( is_null( $thepostid ) && isset( $_POST['post_id'] )  ) {
                 $thepostid = $_POST['post_id'];
             }
