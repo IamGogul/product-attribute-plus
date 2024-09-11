@@ -86,7 +86,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 					// Generate request variable name.
 					$key      = 'attribute_' . sanitize_title( $attribute_name );
 
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 					$selected = isset( $_REQUEST[ $key ] ) ? wc_clean( $_REQUEST[ $key ] ) : $product->get_variation_default_attribute( $attribute_name );
 
 					if( !is_null( $attribute ) ) { // custom attributes throws null

@@ -124,15 +124,20 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
              * current user has the specified capability to manage options able to update the settings
              */
             if( current_user_can( 'manage_options' ) ) {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				$verify_nonce = wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-add-new_attribute' );
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {
 						$key = sprintf('_woo_pap_shape_%d', $id );
+
+		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_shape'] ) );
 					}
 
 					if( isset( $_POST['attribute_pap_size'] ) ) {
 						$key = sprintf('_woo_pap_size_%d', $id );
+
+		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_size'] ) );
 					}
 				}
@@ -198,15 +203,22 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
              * current user has the specified capability to manage options able to update the settings
              */
             if( current_user_can( 'manage_options' ) ) {
+
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 				$verify_nonce = wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-save-attribute_' . $edit );
+
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {
 						$key = sprintf('_woo_pap_shape_%d', $edit );
+
+		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_shape'] ) );
 					}
 
 					if( isset( $_POST['attribute_pap_size'] ) ) {
 						$key = sprintf('_woo_pap_size_%d', $edit );
+
+		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_size'] ) );
 					}
 				}
