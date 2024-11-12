@@ -5,12 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
+if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 
 	/**
 	 * Define the functionality for the public-facing area of the plugin.
 	 */
-    class Woo_Product_Attr_Plus_WP_Plugin_Public {
+    class WCPAPLUS_WP_Plugin_Public {
 
 		/**
 		 * A reference to an instance of this class.
@@ -168,7 +168,7 @@ if( !function_exists( 'woo_pa_plus_wp_plugin_public' ) ) {
      */
     function woo_pa_plus_wp_plugin_public() {
 
-        return Woo_Product_Attr_Plus_WP_Plugin_Public::get_instance();
+        return WCPAPLUS_WP_Plugin_Public::get_instance();
     }
 }
 
