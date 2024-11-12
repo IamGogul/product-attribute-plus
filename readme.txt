@@ -43,6 +43,27 @@ Product Attribute Plus works with any theme, including:
 * Storefront
 * WordPress Default themes
 
+== Source Files and Compression Details ==
+This plugin includes compressed JavaScript and CSS files for optimal performance. The uncompressed source files and build instructions are provided to ensure transparency:
+
+- **Uncompressed JavaScript Files**:
+  - '/product-attribute-plus/src/js/admin' – JavaScript files for the admin area.
+  - '/product-attribute-plus/src/js/public' – JavaScript files for the public-facing area.
+
+- **Uncompressed SCSS Files**:
+  - '/product-attribute-plus/src/scss/admin' – SCSS files for the admin area.
+  - '/product-attribute-plus/src/scss/public' – SCSS files for the public area.
+
+**Build Instructions**:
+All necessary libraries and steps to build the files are included in the `package.json` file. To compile and compress the source files, run the appropriate build commands outlined in the `package.json`.
+
+For more details on setting up the build process, please refer to the `package.json` file located in the root of the plugin directory. Here are the main commands to use:
+
+- `npm run scss:admin:min` – Builds a production (compressed) version of the CSS file for the admin area.
+- `npm run scss:public:min` – Builds a production (compressed) version of the CSS file for the public-facing area.
+- `npm run js:dev` – Creates both uncompressed and development versions of the JavaScript files.
+- `npm run js:prod` – Builds production (compressed) versions of the JavaScript files.
+
 == Changelog ==
 = 1.0.0 =
 *   Initial release
