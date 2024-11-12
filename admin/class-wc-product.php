@@ -110,7 +110,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Products' ) ) {
             printf( '
                 <button class="button plus select_all_attributes"> %1$s </button>
                 <button class="button minus select_no_attributes"> %2$s </button>
-                <!-- <button class="button fr plus js-woo-pap-add-new-attribute" data-type="%3$s" data-taxonomy="%4$s">%5$s</button> -->',
+                <!-- <button class="button fr plus js-product-attribute-plus-add-new-attribute" data-type="%3$s" data-taxonomy="%4$s">%5$s</button> -->',
                 esc_html__( 'Select all', 'product-attribute-plus' ),
                 esc_html__( 'Select none', 'product-attribute-plus' ),
                 esc_attr( $attribute_type ),

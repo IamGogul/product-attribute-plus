@@ -2,8 +2,8 @@ export default class AdminWPAPProductAttrPage {
     constructor(options) {
         this.options = $.extend(true, {
             productAttrTypeSelector      : "#attribute_type",
-            productAttrTypeAddFormFields : ".js-woo-pap-add-field",
-            productAttrTypeEditFormFields: ".js-woo-pap-edit-field",
+            productAttrTypeAddFormFields : ".js-product-attribute-plus-add-field",
+            productAttrTypeEditFormFields: ".js-product-attribute-plus-edit-field",
         }, options );
 
         this._init();

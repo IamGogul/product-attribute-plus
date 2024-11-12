@@ -87,7 +87,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			 * Shape
 			 */
 			printf('
-				<div class="form-field js-woo-pap-add-field attribute_pap_shape-add-field">
+				<div class="form-field js-product-attribute-plus-add-field attribute_pap_shape-add-field">
 					<label for="attribute_pap_shape">%1$s</label>
 					<select name="attribute_pap_shape" id="attribute_pap_shape" class="regular-text"> %2$s </select>
 					<p class="description"> %3$s </p>
@@ -104,7 +104,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			 * Size
 			 */
 			printf('
-				<div class="form-field js-woo-pap-add-field attribute_pap_size-add-field">
+				<div class="form-field js-product-attribute-plus-add-field attribute_pap_size-add-field">
 					<label for="attribute_pap_size">%1$s</label>
 					<select name="attribute_pap_size" id="attribute_pap_size" class="regular-text"> %2$s </select>
 					<p class="description"> %3$s </p>
@@ -157,7 +157,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 				 * Shape
 				 */
 				printf('
-					<tr class="form-field js-woo-pap-edit-field attribute_pap_shape-field">
+					<tr class="form-field js-product-attribute-plus-edit-field attribute_pap_shape-field">
 						<th scope="row" valign="top">
 							<label for="attribute_pap_shape">%1$s</label>
 						</th>
@@ -178,7 +178,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 				 * Size
 				 */
 				printf('
-					<tr class="form-field js-woo-pap-edit-field attribute_pap_size-field">
+					<tr class="form-field js-product-attribute-plus-edit-field attribute_pap_size-field">
 						<th scope="row" valign="top">
 							<label for="attribute_pap_size">%1$s</label>
 						</th>
