@@ -65,8 +65,8 @@ if( !function_exists( 'prod_attr_plus_get_tax_attribute' ) ) {
  * woo-pa-plus-css-vars.css
  * Check woo-pa-plus-css-vars.css exists in a active theme.
  */
-if( !function_exists( 'woo_pa_plus_is_var_style_exists' ) ) {
-	function woo_pa_plus_is_var_style_exists() {
+if( !function_exists( 'prod_attr_plus_is_var_style_exists' ) ) {
+	function prod_attr_plus_is_var_style_exists() {
 		$stylesheet = get_stylesheet_directory() . '/woo-pa-plus-css-vars.css';
 
 		if( file_exists( $stylesheet ) ) {

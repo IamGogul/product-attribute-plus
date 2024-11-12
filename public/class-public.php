@@ -114,7 +114,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Public' ) ) {
 		}
 
 		public function enqueue_vars() {
-			$static_css_vars_stylesheet = woo_pa_plus_is_var_style_exists();
+			$static_css_vars_stylesheet = prod_attr_plus_is_var_style_exists();
 
 			if( is_null( $static_css_vars_stylesheet ) ) {
 				/**
