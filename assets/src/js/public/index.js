@@ -4,8 +4,8 @@ import PublicWPAPSingleProduct from "./single-product";
 class PublicWPAP {
     constructor(options) {
         this.options = $.extend(true, {
-            pluginName   : woo_pa_plus_plugin_L10n.pluginName,
-            pluginVersion: woo_pa_plus_plugin_L10n.pluginVersion,
+            pluginName   : product_attribute_plus_l10n.pluginName,
+            pluginVersion: product_attribute_plus_l10n.pluginVersion,
         }, options );
 
         this._init();

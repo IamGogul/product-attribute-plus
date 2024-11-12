@@ -90,7 +90,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Admin' ) ) {
 				);
 			}
 
-			wp_localize_script( 'jquery', 'woo_pa_plus_plugin_L10n',apply_filters( 'product-attribute-plus-filter/plugin/admin/L10n', $localize )  );
+			wp_localize_script( 'jquery', 'product_attribute_plus_l10n',apply_filters( 'product-attribute-plus-filter/plugin/admin/L10n', $localize )  );
 		}
 
         public function load_modules() {
