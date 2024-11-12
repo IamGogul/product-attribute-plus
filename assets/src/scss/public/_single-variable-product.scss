@@ -10,11 +10,11 @@
         cursor: pointer;
         .product-attribute-plus-sw-wrap {
             @include flexCenter(row, center, center);
-            border: 1px solid var(--woo-pap-swatch-border-color);
-            padding: 3px;   
+            border: 1px solid var(--product-attribute-plus-swatch-border-color);
+            padding: 3px;
             line-height: 1;
             transition: all 0.3s linear;
-            position: relative; 
+            position: relative;
             span {
                 @include flexCenter(row, center, center);
                 width: 30px;
@@ -31,13 +31,13 @@
         }
         &:hover {
             .product-attribute-plus-sw-wrap {
-                border-color: var(--woo-pap-swatch-hover-border-color);
+                border-color: var(--product-attribute-plus-swatch-hover-border-color);
             }
         }
         &.selected {
             z-index: 3;
             .product-attribute-plus-sw-wrap {
-                border-color: var(--woo-pap-swatch-active-border-color);
+                border-color: var(--product-attribute-plus-swatch-active-border-color);
                 transform: scale(1.1);
             }
         }
@@ -62,7 +62,7 @@
                     position: absolute;
                     width: 14px;
                     height: 14px;
-                    border: 1px solid var(--woo-pap-swatch-border-color);
+                    border: 1px solid var(--product-attribute-plus-swatch-border-color);
                     left: 0;
                     top: 0;
                     bottom: 0;
@@ -113,7 +113,7 @@
             width: 36px;
             height: 36px;
             padding: 0;
-            background: var(--woo-pap-swatch-border-color);
+            background: var(--product-attribute-plus-swatch-border-color);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             &:before {
                 content: "";
@@ -129,12 +129,12 @@
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             }
             &:hover {
-                background: var(--woo-pap-swatch-hover-border-color);
+                background: var(--product-attribute-plus-swatch-hover-border-color);
             }
         }
         &.selected {
             .product-attribute-plus-sw-wrap {
-                background: var(--woo-pap-swatch-active-border-color)
+                background: var(--product-attribute-plus-swatch-active-border-color)
             }
         }
     }
