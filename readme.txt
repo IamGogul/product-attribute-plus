@@ -47,12 +47,12 @@ Product Attribute Plus works with any theme, including:
 This plugin includes compressed JavaScript and CSS files for optimal performance. The uncompressed source files and build instructions are provided to ensure transparency:
 
 - **Uncompressed JavaScript Files**:
-  - '/product-attribute-plus/src/js/admin' – JavaScript files for the admin area.
-  - '/product-attribute-plus/src/js/public' – JavaScript files for the public-facing area.
+  - `/product-attribute-plus/src/js/admin` – JavaScript files for the admin area.
+  - `/product-attribute-plus/src/js/public` – JavaScript files for the public-facing area.
 
 - **Uncompressed SCSS Files**:
-  - '/product-attribute-plus/src/scss/admin' – SCSS files for the admin area.
-  - '/product-attribute-plus/src/scss/public' – SCSS files for the public area.
+  - `/product-attribute-plus/src/scss/admin` – SCSS files for the admin area.
+  - `/product-attribute-plus/src/scss/public` – SCSS files for the public area.
 
 **Build Instructions**:
 All necessary libraries and steps to build the files are included in the `package.json` file. To compile and compress the source files, run the appropriate build commands outlined in the `package.json`.
