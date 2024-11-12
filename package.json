@@ -13,6 +13,8 @@
 		"scss:public:min": "npm run scss:public:minify && node clone.public.js && npm run scss:public",
 		"scss:public:watch": "node-sass --recursive -w assets/src/scss/public/ -o assets/public/css --output-style expanded",
 
+		"css": "npm run scss:public:min && npm run scss:admin:min ",
+
 		"js:w:dev": "webpack --mode=development --watch --config webpack.config.js",
 		"js:w:prod": "webpack --mode=production --watch --config webpack.config.js",
 
