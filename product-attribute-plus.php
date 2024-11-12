@@ -115,14 +115,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
 
         public function __construct() {
 
-			$this->product_attr_types = apply_filters( 'woo-pa-plus-filter/plugin/product-attr-types', [
+			$this->product_attr_types = apply_filters( 'product-attribute-plus-filter/plugin/product-attr-types', [
 				'woo-pa-plus-color-sw' => esc_html__( 'Color Swatch', 'product-attribute-plus' ),
 				'woo-pa-plus-image-sw' => esc_html__( 'Image Swatch', 'product-attribute-plus' ),
 				'woo-pa-plus-label-sw' => esc_html__( 'Label Swatch', 'product-attribute-plus' ),
 				'woo-pa-plus-radio'    => esc_html__( 'Radio Button', 'product-attribute-plus' ),
 			]);
 
-			$this->swatch_sizes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/sizes', [
+			$this->swatch_sizes = apply_filters( 'product-attribute-plus-filter/plugin/swatch/sizes', [
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-tiny'   => esc_html__( 'Tiny', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small'  => esc_html__( 'Small', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-medium' => esc_html__( 'Medium', 'product-attribute-plus' ),
@@ -130,7 +130,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
                 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-xlarge' => esc_html__( 'Extra Large', 'product-attribute-plus' ),
 			]);
 
-			$this->swatch_shapes = apply_filters( 'woo-pa-plus-filter/plugin/swatch/shapes', [
+			$this->swatch_shapes = apply_filters( 'product-attribute-plus-filter/plugin/swatch/shapes', [
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-bevel'          => esc_html__( 'Bevel', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-circle'         => esc_html__( 'Circle', 'product-attribute-plus' ),
                 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-hexagon'        => esc_html__( 'Hexagon', 'product-attribute-plus' ),

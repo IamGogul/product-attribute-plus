@@ -109,7 +109,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 					'pluginVersion'           => WPAP_CONST_VERSION,
 					"is_singular_product"     => is_singular( 'product'),
 				];
-				wp_localize_script( 'jquery', 'woo_pa_plus_plugin_L10n', apply_filters( 'woo-pa-plus-filter/plugin/l10n', $localize ) );
+				wp_localize_script( 'jquery', 'woo_pa_plus_plugin_L10n', apply_filters( 'product-attribute-plus-filter/plugin/l10n', $localize ) );
 
 		}
 

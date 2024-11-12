@@ -118,7 +118,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-color-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-color-sw', wp_kses_post( $field ) );
                 break;
 
                 case 'woo-pa-plus-image-sw':
@@ -132,7 +132,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-image-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-image-sw', wp_kses_post( $field ) );
                 break;
 
                 case 'woo-pa-plus-label-sw':
@@ -143,7 +143,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'woo-pa-plus-filter/plugin/attr-col-content/woo-pa-plus-label-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-label-sw', wp_kses_post( $field ) );
                 break;
 
             }

@@ -203,7 +203,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                 ],
             ];
 
-            return apply_filters( 'woo-pa-plus-filter/plugin/settings/product-archive', $settings );
+            return apply_filters( 'product-attribute-plus-filter/plugin/settings/product-archive', $settings );
         }
 
 		/**

@@ -51,7 +51,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 			add_action( 'woocommerce_before_variations_form', [ $this, 'start_capture' ]);
 			add_action( 'woocommerce_after_variations_form', [ $this, 'stop_capture' ]);
 
-            add_filter( 'woo-pa-plus-filter/plugin/variable/product/swatch', [ $this, 'swatch_html' ],10, 7 );
+            add_filter( 'product-attribute-plus-filter/plugin/variable/product/swatch', [ $this, 'swatch_html' ],10, 7 );
         }
 
 		/**
@@ -116,7 +116,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 							// Get terms if this is a taxonomy - ordered. We need the names too.
 							$terms  = wc_get_product_terms( $product->get_id(), $attribute_name, array( 'fields' => 'all' ) );
 							$swatch = apply_filters(
-                                'woo-pa-plus-filter/plugin/variable/product/swatch',
+                                'product-attribute-plus-filter/plugin/variable/product/swatch',
                                 '',
                                 $attribute_type,
                                 $attribute_name,
