@@ -24,7 +24,7 @@ export default class PublicWPAPSingleProduct {
             utils        : $utils,
         } = _self.options;
 
-        $singleProduct.on("click","form.variations_form .woo-pa-plus-swatch-attribute",function(){
+        $singleProduct.on("click","form.variations_form .product-attribute-plus-swatch-attribute",function(){
             var $this      = $(this),
                 $attribute = $this.closest("[data-attribute]").data("attribute"),
                 $select    = document.getElementById( $attribute ), // $("select#"+$attribute ), - it has issues in other languages ( jquery selector doesn't accepts special chars )
@@ -58,7 +58,7 @@ export default class PublicWPAPSingleProduct {
         } = _self.options;
 
         $singleProduct.on("click",$resetSingleProductVariation,function(){
-            var $selected = $(this).closest('form.variations_form').find("ul.woo-pa-plus-swatch li.selected");
+            var $selected = $(this).closest('form.variations_form').find("ul.product-attribute-plus-swatch li.selected");
             $utils._removeState( $selected, 'selected' );
         });
     }
@@ -71,7 +71,7 @@ export default class PublicWPAPSingleProduct {
         } = _self.options;
 
         $singleProduct.find("form.variations_form").on('woocommerce_update_variation_values', function(){
-            $(this).find("ul.woo-pa-plus-swatch").each(function(){
+            $(this).find("ul.product-attribute-plus-swatch").each(function(){
 				var	$this      = this,
 					$attribute = $($this).data("attribute"),
 					$select    = document.getElementById( $attribute ), // $("select#"+$attribute ), - it has issues in other languages ( jquery selector doesn't accepts special chars )
@@ -91,12 +91,12 @@ export default class PublicWPAPSingleProduct {
 
                 $li.each(function(){
 					var $this = this,
-						$value = $($this).find(".woo-pa-plus-swatch-attribute").attr("data-value");
+						$value = $($this).find(".product-attribute-plus-swatch-attribute").attr("data-value");
 
-                    $($this).removeClass("selected woo-pa-plus-li-disabled").addClass("woo-pa-plus-li-disabled");
+                    $($this).removeClass("selected product-attribute-plus-li-disabled").addClass("product-attribute-plus-li-disabled");
 
                     if( $selects.indexOf( $value ) !== -1 ) {
-                        $($this).removeClass("woo-pa-plus-li-disabled");
+                        $($this).removeClass("product-attribute-plus-li-disabled");
 						if( $value == $selected ) {
 							$($this).addClass("selected");
 						}

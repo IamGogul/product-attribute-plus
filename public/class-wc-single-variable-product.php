@@ -129,7 +129,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 							// update variation form
 							$form = preg_replace(
 								'/<select id="(' . sanitize_title( $attribute_name ) . ')" class="([^"]*)" name="([^"]+)" data-attribute_name="([^"]+)"[^>]*>/',
-								$swatch . '<select id="\\1" class="\\2 woo-pa-plus-variation-select" name="\\3" data-attribute_name="\\4" style="display: none;">',
+								$swatch . '<select id="\\1" class="\\2 product-attribute-plus-variation-select" name="\\3" data-attribute_name="\\4" style="display: none;">',
 								$form
 							);
                         }
@@ -148,13 +148,13 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 		public function swatch_html( $html, $attribute_type, $attribute_name, $terms, $options, $selected, $settings ) {
 
 			$class = [
-				'woo-pa-plus-swatch',
+				'product-attribute-plus-swatch',
 				$attribute_type,
 				$settings['size'],
 				$settings['shape'],
 			];
 
-			if( $attribute_type === 'woo-pa-plus-radio' ) {
+			if( $attribute_type === 'product-attribute-plus-radio' ) {
 				unset( $class[2], $class[3] );
 			}
 
@@ -162,7 +162,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
             $html .= sprintf( '<ul class="%1$s" data-attribute="%2$s">', esc_attr( $class ), $attribute_name  );
 
             switch ( $attribute_type ) {
-                case 'woo-pa-plus-color-sw':
+                case 'product-attribute-plus-color-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -172,8 +172,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 							$html .= sprintf(
 								'<li class="%1$s">
-									<div class="woo-pa-plus-sw-wrap">
-										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s" style="background-color:%5$s;"></span>
+									<div class="product-attribute-plus-sw-wrap">
+										<span class="product-attribute-plus-swatch-attribute product-attribute-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s" style="background-color:%5$s;"></span>
 									</div>
 								</li>',
 								esc_attr( $class ),
@@ -186,7 +186,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
                 break;
 
-                case 'woo-pa-plus-image-sw':
+                case 'product-attribute-plus-image-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -197,8 +197,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 							$html .= sprintf(
 								'<li class="%1$s">
-									<div class="woo-pa-plus-sw-wrap">
-										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">%5$s</span>
+									<div class="product-attribute-plus-sw-wrap">
+										<span class="product-attribute-plus-swatch-attribute product-attribute-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">%5$s</span>
 									</div>
 								</li>',
 								esc_attr( $class ),
@@ -211,7 +211,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
 				break;
 
-                case 'woo-pa-plus-label-sw':
+                case 'product-attribute-plus-label-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -221,8 +221,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 							$html .= sprintf(
 								'<li class="%1$s">
-									<div class="woo-pa-plus-sw-wrap">
-										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">%5$s</span>
+									<div class="product-attribute-plus-sw-wrap">
+										<span class="product-attribute-plus-swatch-attribute product-attribute-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">%5$s</span>
 									</div>
 								</li>',
 								esc_attr( $class ),
@@ -235,7 +235,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
 				break;
 
-                case 'woo-pa-plus-radio':
+                case 'product-attribute-plus-radio':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -245,8 +245,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 							$html .= sprintf(
 								'<li class="%1$s">
-									<div class="woo-pa-plus-sw-wrap">
-										<span class="woo-pa-plus-swatch-attribute woo-pa-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">
+									<div class="product-attribute-plus-sw-wrap">
+										<span class="product-attribute-plus-swatch-attribute product-attribute-plus-swatch-attr-%2$s" data-value="%3$s" data-name="%4$s">
 											%4$s
 										</span>
 									</div>
@@ -283,8 +283,8 @@ if( !function_exists( 'prod_attr_plus_wp_plugin_single_variable_product' ) ) {
         if( 'yes' == $vproduct ) {
 
             $args = [
-				'size'  => get_option( 'woo_pap_vproduct_swatch_size', 'woo-pa-plus-swatch-size woo-pa-plus-swatch-size-small' ),
-				'shape' => get_option( 'woo_pap_vproduct_swatch_shape', 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square' ),
+				'size'  => get_option( 'woo_pap_vproduct_swatch_size', 'product-attribute-plus-swatch-size product-attribute-plus-swatch-size-small' ),
+				'shape' => get_option( 'woo_pap_vproduct_swatch_shape', 'product-attribute-plus-swatch-shape product-attribute-plus-swatch-shape-square' ),
             ];
 
             return WCPAPLUS_WP_Plugin_Single_Variable_Product::get_instance( $args );

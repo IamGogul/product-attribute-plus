@@ -29,17 +29,17 @@ export default class AdminWPAPProductAttrPage {
                     _val = _this.val();
 
                 switch( _val ) {
-                    case 'woo-pa-plus-color-sw':
+                    case 'product-attribute-plus-color-sw':
                         $addFields.show();
                         $editFields.show();
                     break;
 
-                    case 'woo-pa-plus-image-sw':
+                    case 'product-attribute-plus-image-sw':
                         $addFields.show();
                         $editFields.show();
                     break;
 
-                    case 'woo-pa-plus-label-sw':
+                    case 'product-attribute-plus-label-sw':
                         $addFields.show();
                         $editFields.show();
                     break;

@@ -3,8 +3,8 @@ export default class AdminWPAPImageSwatch {
         const _self = this;
 
         _self.options = $.extend(true, {
-            imgSwatchBtn      : ".attribute-screen.woo-pa-plus-sw-image-button",
-            imgSwatchRemoveBtn: ".attribute-screen.woo-pa-plus-sw-image-img-remove",
+            imgSwatchBtn      : ".attribute-screen.product-attribute-plus-sw-image-button",
+            imgSwatchRemoveBtn: ".attribute-screen.product-attribute-plus-sw-image-img-remove",
         }, options );
 
         $(document).ready(function(){
@@ -59,14 +59,14 @@ export default class AdminWPAPImageSwatch {
                     $attachment_image = $attachment.sizes.thumbnail ? $attachment.sizes.thumbnail.url : $attachment.url;
 
                 var $attachment_id = $attachment.id,
-                    $image_html    = '<div class="woo-pa-plus-sw-image-img-holder">' +
-                        '<div class="woo-pa-plus-sw-image-img">' +
+                    $image_html    = '<div class="product-attribute-plus-sw-image-img-holder">' +
+                        '<div class="product-attribute-plus-sw-image-img">' +
                             '<img src="'+$attachment_image+'"/>' +
-                            '<a href="javascript:void(0);" class="attribute-screen woo-pa-plus-sw-image-img-remove" title="' + $el.data('remove') + '"></a>' +
+                            '<a href="javascript:void(0);" class="attribute-screen product-attribute-plus-sw-image-img-remove" title="' + $el.data('remove') + '"></a>' +
                         '</div>';
                     '</div>';
 
-                $el.siblings( 'input.woo-pa-plus-sw-image-id' ).val( $attachment_id );
+                $el.siblings( 'input.product-attribute-plus-sw-image-id' ).val( $attachment_id );
                 $( $image_html ).insertBefore( $el.parent() );
 
 				setTimeout(function(){
@@ -83,11 +83,11 @@ export default class AdminWPAPImageSwatch {
         $("body").on("click", $ele, function($event){
             $event.preventDefault();
             var $el        = $( this ),
-                $imgPicker = $el.parents(".woo-pa-plus-sw-image-img-holder").next(".woo-pa-plus-sw-image-img-picker");
+                $imgPicker = $el.parents(".product-attribute-plus-sw-image-img-holder").next(".product-attribute-plus-sw-image-img-picker");
 
-            $imgPicker.find(".woo-pa-plus-sw-image-id").val("");
-            $imgPicker.find(".woo-pa-plus-sw-image-button").removeClass("hidden");
-            $el.parents(".woo-pa-plus-sw-image-img-holder").remove();
+            $imgPicker.find(".product-attribute-plus-sw-image-id").val("");
+            $imgPicker.find(".product-attribute-plus-sw-image-button").removeClass("hidden");
+            $el.parents(".product-attribute-plus-sw-image-img-holder").remove();
         });
     }
 
@@ -98,7 +98,7 @@ export default class AdminWPAPImageSwatch {
 
         console.log( options.data );
 
-        if( 0 <= options.data.indexOf('woo-pa-plus-image-sw') ) {
+        if( 0 <= options.data.indexOf('product-attribute-plus-image-sw') ) {
 
 			if ( request && 4 === request.readyState && 200 === request.status
 				&& options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {
@@ -108,9 +108,9 @@ export default class AdminWPAPImageSwatch {
 					return;
 				}
 
-                $('input.woo-pa-plus-sw-image-id' ).val('');
-                $('.woo-pa-plus-sw-image-img-holder').remove();
-                $('.woo-pa-plus-sw-image-button').removeClass("hidden");
+                $('input.product-attribute-plus-sw-image-id' ).val('');
+                $('.product-attribute-plus-sw-image-img-holder').remove();
+                $('.product-attribute-plus-sw-image-button').removeClass("hidden");
 			}
         }
     }

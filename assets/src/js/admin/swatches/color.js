@@ -3,7 +3,7 @@ export default class AdminWPAPColorSwatch {
         const _self = this;
 
         _self.options = $.extend(true, {
-            colorSwatch : ".woo-pa-plus-color-picker",
+            colorSwatch : ".product-attribute-plus-color-picker",
         }, options );
 
         $(document).ready(function(){
@@ -32,7 +32,7 @@ export default class AdminWPAPColorSwatch {
 			return;
 		}
 
-        if( 0 <= options.data.indexOf('woo-pa-plus-color-sw') ) {
+        if( 0 <= options.data.indexOf('product-attribute-plus-color-sw') ) {
 
 			if ( request && 4 === request.readyState && 200 === request.status
 				&& options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {

@@ -1,21 +1,21 @@
-.woo-pa-plus-attr-col {
+.product-attribute-plus-attr-col {
     border:1px solid #ccc;
 	height:40px;
 	width :40px;
 
-    &.woo-pa-plus-label-sw {
+    &.product-attribute-plus-label-sw {
 		font-weight:700;
 		line-height:40px;
 		text-align:center;
     }
 
-    &.woo-pa-plus-image-sw {
+    &.product-attribute-plus-image-sw {
 		background-repeat:no-repeat;
 		background-size:cover;
     }
 }
 
-.woo-pa-plus-sw-image-img {
+.product-attribute-plus-sw-image-img {
 	height:100px;
 	width:100px;
 	position:relative;
@@ -27,7 +27,7 @@
 		width:100px;
 	}
 
-    .woo-pa-plus-sw-image-img-remove:before {
+    .product-attribute-plus-sw-image-img-remove:before {
 		color: #ff0000;
 		content: "\f335";
 		font-family: dashicons;

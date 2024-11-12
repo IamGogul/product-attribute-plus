@@ -110,40 +110,40 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
 
             switch ( $attribute_type ) {
 
-                case 'woo-pa-plus-color-sw':
+                case 'product-attribute-plus-color-sw':
                     $field = sprintf(
-                        '<div class="woo-pa-plus-attr-col %s" style="background-color:%s;"></div>',
+                        '<div class="product-attribute-plus-attr-col %s" style="background-color:%s;"></div>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-color-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-color-sw', wp_kses_post( $field ) );
                 break;
 
-                case 'woo-pa-plus-image-sw':
+                case 'product-attribute-plus-image-sw':
                     $image = $attribute_value ? wp_get_attachment_image_src( $attribute_value, [ 100, 100 ] ) : '';
                     $image = $image ? $image[0] : WPAP_CONST_URL . 'assets/admin/images/placeholder.png';
 
                     $field = sprintf(
-                        '<div class="woo-pa-plus-attr-col %s" style="background-image:url(%s);"></div>',
+                        '<div class="product-attribute-plus-attr-col %s" style="background-image:url(%s);"></div>',
                         esc_attr( $attribute_type ),
                         esc_url( $image )
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-image-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-image-sw', wp_kses_post( $field ) );
                 break;
 
-                case 'woo-pa-plus-label-sw':
+                case 'product-attribute-plus-label-sw':
                     $field = sprintf(
-                        '<div class="woo-pa-plus-attr-col %s">%s</div>',
+                        '<div class="product-attribute-plus-attr-col %s">%s</div>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/woo-pa-plus-label-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-label-sw', wp_kses_post( $field ) );
                 break;
 
             }
@@ -189,7 +189,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                 return;
             }
 
-            if( !in_array( $attribute_type, [ 'woo-pa-plus-color-sw', 'woo-pa-plus-image-sw', 'woo-pa-plus-label-sw' ] ) ) {
+            if( !in_array( $attribute_type, [ 'product-attribute-plus-color-sw', 'product-attribute-plus-image-sw', 'product-attribute-plus-label-sw' ] ) ) {
                 return;
             }
 
@@ -214,24 +214,24 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
             );
 
             switch( $attribute_type ) {
-                case 'woo-pa-plus-color-sw':
+                case 'product-attribute-plus-color-sw':
                     printf(
-                        '<input type="text" id="term-%1$s" class="woo-pa-plus-color-picker" name="%1$s" value="%2$s"/>',
+                        '<input type="text" id="term-%1$s" class="product-attribute-plus-color-picker" name="%1$s" value="%2$s"/>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );
                 break;
 
-                case 'woo-pa-plus-image-sw':
+                case 'product-attribute-plus-image-sw':
                     if( 'edit' == $mode && !empty( $attribute_value ) ) {
                         $image = $attribute_value ? wp_get_attachment_image_src( $attribute_value, [ 100, 100 ] ) : '';
                         $image = $image ? $image[0] : '';
 
                         printf(
-                            '<div class="woo-pa-plus-sw-image-img-holder">
+                            '<div class="product-attribute-plus-sw-image-img-holder">
                                 <div class="kfwoo-sw-image-img">
                                     <img src="%1$s"/>
-                                    <a href="javascript:void(0);" class="attribute-screen woo-pa-plus-sw-image-img-remove" title="%2$s"></a>
+                                    <a href="javascript:void(0);" class="attribute-screen product-attribute-plus-sw-image-img-remove" title="%2$s"></a>
                                 </div>
                             </div>',
                             esc_url( $image ),
@@ -240,9 +240,9 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     }
 
                     printf(
-                        '<div class="woo-pa-plus-sw-image-img-picker">
-                            <input type="hidden" readonly id="term-%1$s" class="woo-pa-plus-sw-image-id" name="%1$s" value="%2$s"/>
-                            <button data-title="%3$s" data-button="%4$s" data-remove="%5$s" class="button button-secondary attribute-screen woo-pa-plus-sw-image-button %6$s">%7$s</button>
+                        '<div class="product-attribute-plus-sw-image-img-picker">
+                            <input type="hidden" readonly id="term-%1$s" class="product-attribute-plus-sw-image-id" name="%1$s" value="%2$s"/>
+                            <button data-title="%3$s" data-button="%4$s" data-remove="%5$s" class="button button-secondary attribute-screen product-attribute-plus-sw-image-button %6$s">%7$s</button>
                         </div>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value ),
@@ -254,9 +254,9 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
                 break;
 
-                case 'woo-pa-plus-label-sw':
+                case 'product-attribute-plus-label-sw':
                     printf(
-                        '<input type="text" id="term-%1$s" class="regular-text woo-pa-plus-label" name="%1$s" value="%2$s"/>',
+                        '<input type="text" id="term-%1$s" class="regular-text product-attribute-plus-label" name="%1$s" value="%2$s"/>',
                         esc_attr( $attribute_type ),
                         esc_attr( $attribute_value )
                     );

@@ -71,7 +71,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
          * Displays the classes for the body tag
          */
         public function body_classes( $classes ) {
-			$classes[] = 'woo-pa-plus-free-plugin';
+			$classes[] = 'product-attribute-plus-free-plugin';
 			return $classes;
 		}
 
