@@ -62,15 +62,15 @@ if( !function_exists( 'prod_attr_plus_get_tax_attribute' ) ) {
 }
 
 /**
- * woo-pa-plus-css-vars.css
- * Check woo-pa-plus-css-vars.css exists in a active theme.
+ * product-attribute-plus-css-vars.css
+ * Check product-attribute-plus-css-vars.css exists in a active theme.
  */
 if( !function_exists( 'prod_attr_plus_is_var_style_exists' ) ) {
 	function prod_attr_plus_is_var_style_exists() {
-		$stylesheet = get_stylesheet_directory() . '/woo-pa-plus-css-vars.css';
+		$stylesheet = get_stylesheet_directory() . '/product-attribute-plus-css-vars.css';
 
 		if( file_exists( $stylesheet ) ) {
-			return get_theme_file_uri(  'woo-pa-plus-css-vars.css' );
+			return get_theme_file_uri(  'product-attribute-plus-css-vars.css' );
 		}
 
 		return;

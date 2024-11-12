@@ -135,16 +135,16 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 
 				if( !empty( $vars ) ) {
 					$css = sprintf(
-						/* translators: %s: woo-pa-plus-css-vars.css - a stylesheet file name */
+						/* translators: %s: product-attribute-plus-css-vars.css - a stylesheet file name */
 						esc_html__('/* Create a file %s in active theme and add the below css in it. */', 'product-attribute-plus' ),
-						'woo-pa-plus-css-vars.css'
+						'product-attribute-plus-css-vars.css'
 					);
 
 					$css .= sprintf('%1$s :root{%1$s%2$s}', "\n", $vars );
 					wp_add_inline_style( WPAP_CONST_SAN_PLUGIN_NAME, $css );
 				}
 			} else {
-				wp_enqueue_style( 'woo-pa-plus-css-vars', $static_css_vars_stylesheet, [], WPAP_CONST_VERSION, 'all' );
+				wp_enqueue_style( 'product-attribute-plus-css-vars', $static_css_vars_stylesheet, [], WPAP_CONST_VERSION, 'all' );
 			}
 		}
 
