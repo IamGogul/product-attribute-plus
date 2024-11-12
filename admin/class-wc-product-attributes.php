@@ -5,13 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
+if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 
 	/**
 	 * Define all actions and hooks that occur in the admin product attributes edit page.
      * edit.php?post_type=product&taxonomy=***
 	 */
-    class Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes {
+    class WCPAPLUS_WP_Plugin_Product_Attributes {
 
 		/**
 		 * A reference to an instance of this class.
@@ -275,16 +275,16 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin_product_attributes' ) ) {
+if( !function_exists( 'prod_attr_plus_wp_plugin_product_attributes' ) ) {
 
     /**
      * Returns the instance of a class.
      */
-    function woo_pa_plus_wp_plugin_product_attributes() {
+    function prod_attr_plus_wp_plugin_product_attributes() {
 
-        return Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes::get_instance();
+        return WCPAPLUS_WP_Plugin_Product_Attributes::get_instance();
     }
 }
 
-woo_pa_plus_wp_plugin_product_attributes();
+prod_attr_plus_wp_plugin_product_attributes();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */
