@@ -80,7 +80,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
                 $attributes = $product->get_variation_attributes();
 
                 foreach( $attributes as $attribute_name => $options ) {
-					$attribute      = woo_pa_plus_get_tax_attribute( $attribute_name );
+					$attribute      = prod_attr_plus_get_tax_attribute( $attribute_name );
 					$attribute_type = $attribute->attribute_type;
 
 					// Generate request variable name.

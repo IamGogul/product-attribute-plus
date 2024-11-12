@@ -43,8 +43,8 @@ if( !function_exists( 'prod_attr_plus_is_plugin_active' ) ) {
 /**
  * Get attribute's properties
  */
-if( !function_exists( 'woo_pa_plus_get_tax_attribute' ) ) {
-	function woo_pa_plus_get_tax_attribute( $taxonomy ) {
+if( !function_exists( 'prod_attr_plus_get_tax_attribute' ) ) {
+	function prod_attr_plus_get_tax_attribute( $taxonomy ) {
 		global $wpdb;
 		$attr = substr($taxonomy, 3);
 
