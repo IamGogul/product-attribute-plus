@@ -5,13 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) ) {
+if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 	/**
 	 * The class responsible for defining all actions and hooks that occur in the single variable product.
      *
 	 */
-    class Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product {
+    class WCPAPLUS_WP_Plugin_Single_Variable_Product {
 
 		/**
 		 * A reference to an instance of this class.
@@ -287,7 +287,7 @@ if( !function_exists( 'woo_pa_plus_wp_plugin_single_variable_product' ) ) {
 				'shape' => get_option( 'woo_pap_vproduct_swatch_shape', 'woo-pa-plus-swatch-shape woo-pa-plus-swatch-shape-square' ),
             ];
 
-            return Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product::get_instance( $args );
+            return WCPAPLUS_WP_Plugin_Single_Variable_Product::get_instance( $args );
         }
     }
 }
