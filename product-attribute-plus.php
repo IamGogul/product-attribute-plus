@@ -22,8 +22,8 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Debug
  */
-if( !function_exists( 'woo_pa_plus_debug' ) ) {
-	function woo_pa_plus_debug( $arg = NULL ) {
+if( !function_exists( 'prod_attr_plus_debug' ) ) {
+	function prod_attr_plus_debug( $arg = NULL ) {
 		echo '<pre>';
 		var_dump( $arg );
 		echo '</pre>';
