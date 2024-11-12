@@ -39,7 +39,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Admin' ) ) {
 			add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ], 100 );
 
             $this->load_modules();
-            do_action( 'woo-pa-plus-action/plugin/admin/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/admin/loaded' );
 
         }
 

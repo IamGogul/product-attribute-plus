@@ -46,12 +46,12 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
 
             add_action( 'admin_init', [ $this, 'taxonomies_init' ] );
 
-            add_action( 'woo-pa-plus-action/plugin/product-attribute-type-field', [ $this, 'print_attribute_field' ], 10, 3 );
+            add_action( 'product-attribute-plus-action/plugin/product-attribute-type-field', [ $this, 'print_attribute_field' ], 10, 3 );
 
             add_action( 'created_term', [ $this, 'save_term_meta' ], 10, 4 );
             add_action( 'edit_term', [ $this, 'save_term_meta' ], 10, 4 );
 
-            do_action( 'woo-pa-plus-action/plugin/product-attributes-type/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/product-attributes-type/loaded' );
 
         }
 
@@ -161,7 +161,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                 return;
             }
 
-            do_action( 'woo-pa-plus-action/plugin/product-attribute-type-field', $attribute->attribute_type, $attribute_value, $mode );
+            do_action( 'product-attribute-plus-action/plugin/product-attribute-type-field', $attribute->attribute_type, $attribute_value, $mode );
         }
 
         /**
@@ -177,7 +177,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
 
             $attribute_value = get_term_meta( $term->term_id, $attribute->attribute_type, true );
 
-            do_action( 'woo-pa-plus-action/plugin/product-attribute-type-field', $attribute->attribute_type, $attribute_value, $mode );
+            do_action( 'product-attribute-plus-action/plugin/product-attribute-type-field', $attribute->attribute_type, $attribute_value, $mode );
         }
 
         /**

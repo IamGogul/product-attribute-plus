@@ -37,7 +37,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_i18n' ) ) {
         public function __construct() {
 
 			add_action( 'plugins_loaded', [ $this, 'load_plugin_textdomain' ] );
-            do_action( 'woo-pa-plus-action/plugin/i18n/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/i18n/loaded' );
 
         }
 

@@ -70,7 +70,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			add_action( 'woocommerce_after_edit_attribute_fields', [ $this, 'edit_attribute_fields' ] );
 			add_action( 'woocommerce_attribute_updated', [ $this, 'update_attribute_meta' ], 10, 1 );
 
-            do_action( 'woo-pa-plus-action/plugin/product-attributes/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/product-attributes/loaded' );
 
         }
 

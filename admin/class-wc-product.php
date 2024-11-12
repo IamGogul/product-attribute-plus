@@ -46,7 +46,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Products' ) ) {
 
             add_action( 'woocommerce_product_option_terms', [ $this, 'wc_product_option_terms' ], 10, 3 );
 
-            do_action( 'woo-pa-plus-action/plugin/admin/product/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/admin/product/loaded' );
         }
 
         /**

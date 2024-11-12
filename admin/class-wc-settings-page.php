@@ -60,7 +60,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
             add_action( 'woocommerce_settings_' . $this->id, [ $this, 'output'] );
             add_action( 'woocommerce_settings_save_' . $this->id, [ $this, 'save'] );
 
-            do_action( 'woo-pa-plus-action/plugin/settings/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/settings/loaded' );
         }
 
         /**

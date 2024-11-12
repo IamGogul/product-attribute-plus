@@ -39,7 +39,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Action_Links' ) ) {
             add_filter( 'plugin_action_links_'.WPAP_CONST_BASENAME, [ $this, 'plugin_action_links' ], 10, 4 );
             add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 4 );
 
-            do_action( 'woo-pa-plus-action/plugin/action-links/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/action-links/loaded' );
 
         }
 

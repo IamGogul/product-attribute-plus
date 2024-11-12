@@ -150,7 +150,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
 			register_activation_hook( __FILE__, [ $this, 'activate_plugin' ] );
 			register_deactivation_hook( __FILE__, [ $this, 'deactivate_plugin' ] );
 
-            do_action( 'woo-pa-plus-action/plugin/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/loaded' );
         }
 
 		/**

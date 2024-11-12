@@ -45,7 +45,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 
 			$this->load_modules();
 
-            do_action( 'woo-pa-plus-action/plugin/public/loaded' );
+            do_action( 'product-attribute-plus-action/plugin/public/loaded' );
 
         }
 
