@@ -229,7 +229,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
 
                         printf(
                             '<div class="product-attribute-plus-sw-image-img-holder">
-                                <div class="kfwoo-sw-image-img">
+                                <div class="pap-sw-image-img">
                                     <img src="%1$s"/>
                                     <a href="javascript:void(0);" class="attribute-screen product-attribute-plus-sw-image-img-remove" title="%2$s"></a>
                                 </div>
