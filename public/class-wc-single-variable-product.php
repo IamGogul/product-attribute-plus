@@ -92,8 +92,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 					if( !is_null( $attribute ) ) { // custom attributes throws null
 						if( array_key_exists( $attribute_type,  $this->product_attr_types ) ) {
 
-                            $pap_shape_key = sprintf('_woo_pap_shape_%d', $attribute->attribute_id );
-                            $pap_size_key  = sprintf('_woo_pap_size_%d', $attribute->attribute_id );
+                            $pap_shape_key = sprintf('_product_attr_plus_shape_%d', $attribute->attribute_id );
+                            $pap_size_key  = sprintf('_product_attr_plus_size_%d', $attribute->attribute_id );
 
                             /**
                              * Shape
@@ -278,13 +278,13 @@ if( !function_exists( 'prod_attr_plus_wp_plugin_single_variable_product' ) ) {
      */
     function prod_attr_plus_wp_plugin_single_variable_product() {
 
-        $vproduct = get_option( 'woo_pap_manage_swatch_vproduct', 'yes' );
+        $vproduct = get_option( 'product_attr_plus_manage_swatch_vproduct', 'yes' );
 
         if( 'yes' == $vproduct ) {
 
             $args = [
-				'size'  => get_option( 'woo_pap_vproduct_swatch_size', 'product-attribute-plus-swatch-size product-attribute-plus-swatch-size-small' ),
-				'shape' => get_option( 'woo_pap_vproduct_swatch_shape', 'product-attribute-plus-swatch-shape product-attribute-plus-swatch-shape-square' ),
+				'size'  => get_option( 'product_attr_plus_vproduct_swatch_size', 'product-attribute-plus-swatch-size product-attribute-plus-swatch-size-small' ),
+				'shape' => get_option( 'product_attr_plus_vproduct_swatch_shape', 'product-attribute-plus-swatch-shape product-attribute-plus-swatch-shape-square' ),
             ];
 
             return WCPAPLUS_WP_Plugin_Single_Variable_Product::get_instance( $args );

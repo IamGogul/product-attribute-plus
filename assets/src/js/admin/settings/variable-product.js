@@ -3,7 +3,7 @@ import AdminWPAPSettingsDependency from "./dependency";
 export default class AdminWPAPVariableProductSettings {
     constructor(options) {
         this.options = $.extend(true, {
-            vProductSettingsHandler  : "#woo_pap_manage_swatch_vproduct",
+            vProductSettingsHandler  : "#product_attr_plus_manage_swatch_vproduct",
             vProductSettingsSelector : ".woo-pap-manage-swatch-vproduct-field",
         }, options );
 

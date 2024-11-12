@@ -128,14 +128,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 				$verify_nonce = wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-add-new_attribute' );
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {
-						$key = sprintf('_woo_pap_shape_%d', $id );
+						$key = sprintf('_product_attr_plus_shape_%d', $id );
 
 		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_shape'] ) );
 					}
 
 					if( isset( $_POST['attribute_pap_size'] ) ) {
-						$key = sprintf('_woo_pap_size_%d', $id );
+						$key = sprintf('_product_attr_plus_size_%d', $id );
 
 		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_size'] ) );
@@ -150,8 +150,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			$edit = isset( $_GET['edit'] ) ? absint( $_GET['edit'] ) : 0;
 
 			if ( $edit > 0 ) {
-				$pap_shape_key = sprintf('_woo_pap_shape_%d', $edit );
-				$pap_size_key  = sprintf('_woo_pap_size_%d', $edit );
+				$pap_shape_key = sprintf('_product_attr_plus_shape_%d', $edit );
+				$pap_size_key  = sprintf('_product_attr_plus_size_%d', $edit );
 
 				/**
 				 * Shape
@@ -209,14 +209,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {
-						$key = sprintf('_woo_pap_shape_%d', $edit );
+						$key = sprintf('_product_attr_plus_shape_%d', $edit );
 
 		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_shape'] ) );
 					}
 
 					if( isset( $_POST['attribute_pap_size'] ) ) {
-						$key = sprintf('_woo_pap_size_%d', $edit );
+						$key = sprintf('_product_attr_plus_size_%d', $edit );
 
 		                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 						update_option( $key, sanitize_text_field( $_POST['attribute_pap_size'] ) );

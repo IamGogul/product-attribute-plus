@@ -125,9 +125,9 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 				/**
 				 * Single Variable Product
 				 */
-					$vproduct_swatch_border_color        = get_option( 'woo_pap_vproduct_swatch_border_color', '#dddddd' );
-					$vproduct_swatch_active_border_color = get_option( 'woo_pap_vproduct_swatch_active_border_color', '#ff0000' );
-					$vproduct_swatch_hover_border_color  = get_option( 'woo_pap_vproduct_swatch_hover_border_color', '#000000' );
+					$vproduct_swatch_border_color        = get_option( 'product_attr_plus_vproduct_swatch_border_color', '#dddddd' );
+					$vproduct_swatch_active_border_color = get_option( 'product_attr_plus_vproduct_swatch_active_border_color', '#ff0000' );
+					$vproduct_swatch_hover_border_color  = get_option( 'product_attr_plus_vproduct_swatch_hover_border_color', '#000000' );
 
 					$vars .= sprintf('--woo-pap-swatch-border-color:%1$s;%2$s', $vproduct_swatch_border_color, "\n" );
 					$vars .= sprintf('--woo-pap-swatch-active-border-color:%1$s;%2$s', $vproduct_swatch_active_border_color, "\n" );

@@ -131,19 +131,19 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     'title' => esc_html__( 'Configure swatch settings for the variable product detail page.', 'product-attribute-plus' ),
                     'type'  => 'title',
                     'desc'  => '',
-                    'id'    => 'variable_product_woo_pap_swatch_options',
+                    'id'    => 'variable_product_product_attr_plus_swatch_options',
                 ],
                     [
                         'title'   => esc_html__( 'Manage Swatch', 'product-attribute-plus' ),
                         'desc'    => esc_html__( 'Toggle the display of swatches in the variable product detail page.', 'product-attribute-plus' ),
-                        'id'      => 'woo_pap_manage_swatch_vproduct',
+                        'id'      => 'product_attr_plus_manage_swatch_vproduct',
                         'default' => 'yes',
                         'type'    => 'checkbox',
                     ],
                     [
                         'title'    => esc_html__( 'Swatch Size', 'product-attribute-plus' ),
                         'desc'     => esc_html__( 'Select the size of the swatch to be displayed on the variable product detail page.', 'product-attribute-plus' ),
-                        'id'       => 'woo_pap_vproduct_swatch_size',
+                        'id'       => 'product_attr_plus_vproduct_swatch_size',
                         'type'     => 'select',
                         'class'    => 'wc-enhanced-select',
                         'css'      => 'min-width:300px;',
@@ -155,7 +155,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     [
                         'title'    => esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
                         'desc'     => esc_html__( 'Select the shape of the swatch to be displayed on the variable product detail page.', 'product-attribute-plus' ),
-                        'id'       => 'woo_pap_vproduct_swatch_shape',
+                        'id'       => 'product_attr_plus_vproduct_swatch_shape',
                         'type'     => 'select',
                         'class'    => 'wc-enhanced-select',
                         'css'      => 'min-width:300px;',
@@ -167,7 +167,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     [
                         'title'    => esc_html__( 'Swatch Border Color', 'product-attribute-plus' ),
                         'desc'     => esc_html__( 'Set the border color of the swatch.', 'product-attribute-plus' ),
-                        'id'       => 'woo_pap_vproduct_swatch_border_color',
+                        'id'       => 'product_attr_plus_vproduct_swatch_border_color',
                         'type'     => 'color',
                         'css'      => 'width:6em;',
                         'default'  => '#dddddd',
@@ -178,7 +178,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     [
                         'title'    => esc_html__( 'Swatch Hover Border Color', 'product-attribute-plus' ),
                         'desc'     => esc_html__( 'The border color of the swatch was set when hovered.', 'product-attribute-plus' ),
-                        'id'       => 'woo_pap_vproduct_swatch_hover_border_color',
+                        'id'       => 'product_attr_plus_vproduct_swatch_hover_border_color',
                         'type'     => 'color',
                         'css'      => 'width:6em;',
                         'default'  => '#000000',
@@ -189,7 +189,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     [
                         'title'    => esc_html__( 'Active Swatch Border Color', 'product-attribute-plus' ),
                         'desc'     => esc_html__( 'Set the border color of the selected swatch.', 'product-attribute-plus' ),
-                        'id'       => 'woo_pap_vproduct_swatch_active_border_color',
+                        'id'       => 'product_attr_plus_vproduct_swatch_active_border_color',
                         'type'     => 'color',
                         'css'      => 'width:6em;',
                         'default'  => '#ff0000',
@@ -199,7 +199,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                     ],
                 [
 					'type' => 'sectionend',
-					'id'   => 'variable_product_woo_pap_swatch_options',
+					'id'   => 'variable_product_product_attr_plus_swatch_options',
                 ],
             ];
 
