@@ -161,16 +161,16 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin_public' ) ) {
+if( !function_exists( 'prod_attr_plus_wp_plugin_public' ) ) {
 
     /**
      * Returns the instance of a class.
      */
-    function woo_pa_plus_wp_plugin_public() {
+    function prod_attr_plus_wp_plugin_public() {
 
         return WCPAPLUS_WP_Plugin_Public::get_instance();
     }
 }
 
-woo_pa_plus_wp_plugin_public();
+prod_attr_plus_wp_plugin_public();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */
