@@ -301,14 +301,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
     }
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin' ) ) {
+if( !function_exists( 'prod_attr_plus_wp_plugin' ) ) {
     /**
      * Returns instance of the WooCommerce Product Attributes Plus WP Plugin class.
      */
-    function woo_pa_plus_wp_plugin() {
+    function prod_attr_plus_wp_plugin() {
         return WCPAPLUS_WP_Plugin::get_instance();
     }
 }
 
-woo_pa_plus_wp_plugin();
+prod_attr_plus_wp_plugin();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */

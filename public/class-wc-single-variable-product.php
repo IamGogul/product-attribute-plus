@@ -46,7 +46,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Single_Variable_Product' ) )
 
             $this->args = $args;
 
-			$this->product_attr_types = woo_pa_plus_wp_plugin()->product_attr_types;
+			$this->product_attr_types = prod_attr_plus_wp_plugin()->product_attr_types;
 
 			add_action( 'woocommerce_before_variations_form', [ $this, 'start_capture' ]);
 			add_action( 'woocommerce_after_variations_form', [ $this, 'stop_capture' ]);

@@ -42,7 +42,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Products' ) ) {
 		 */
         public function __construct() {
 
-			$this->product_attr_types = woo_pa_plus_wp_plugin()->product_attr_types;
+			$this->product_attr_types = prod_attr_plus_wp_plugin()->product_attr_types;
 
             add_action( 'woocommerce_product_option_terms', [ $this, 'wc_product_option_terms' ], 10, 3 );
 

@@ -52,9 +52,9 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_Product_Attributes' ) ) {
 		 */
         public function __construct() {
 
-			$this->product_attr_types = woo_pa_plus_wp_plugin()->product_attr_types;
-			$this->swatch_shapes      = woo_pa_plus_wp_plugin()->swatch_shapes;
-			$this->swatch_sizes       = woo_pa_plus_wp_plugin()->swatch_sizes;
+			$this->product_attr_types = prod_attr_plus_wp_plugin()->product_attr_types;
+			$this->swatch_shapes      = prod_attr_plus_wp_plugin()->swatch_shapes;
+			$this->swatch_sizes       = prod_attr_plus_wp_plugin()->swatch_sizes;
 
 			add_filter( 'product_attributes_type_selector', [ $this, 'add_attribute_types' ] );
 
