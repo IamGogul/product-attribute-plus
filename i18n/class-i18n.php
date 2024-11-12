@@ -5,12 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_i18n' ) ) {
+if( !class_exists( 'WCPAPLUS_WP_Plugin_i18n' ) ) {
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 */
-    class Woo_Product_Attr_Plus_WP_Plugin_i18n {
+    class WCPAPLUS_WP_Plugin_i18n {
 
 		/**
 		 * A reference to an instance of this class.
@@ -54,16 +54,16 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin_i18n' ) ) {
 
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin_i18n' ) ) {
+if( !function_exists( 'prod_attr_plus_wp_plugin_i18n' ) ) {
 
     /**
      * Returns the instance of a class.
      */
-    function woo_pa_plus_wp_plugin_i18n() {
+    function prod_attr_plus_wp_plugin_i18n() {
 
-        return Woo_Product_Attr_Plus_WP_Plugin_i18n::get_instance();
+        return WCPAPLUS_WP_Plugin_i18n::get_instance();
     }
 }
 
-woo_pa_plus_wp_plugin_i18n();
+prod_attr_plus_wp_plugin_i18n();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */
