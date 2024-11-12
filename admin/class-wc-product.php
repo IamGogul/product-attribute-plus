@@ -69,8 +69,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Products' ) ) {
             // woCommerce 3.5.0 doesn't supports global $thepostid
             // phpcs:disable WordPress.Security.NonceVerification.Missing
             if( is_null( $thepostid ) && isset( $_POST['post_id'] )  ) {
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
-                $thepostid = $_POST['post_id'];
+                $thepostid = absint( wp_unslash( $_POST['post_id'] ) );
             }
 
             $taxonomy_name     = wc_attribute_taxonomy_name( $attribute_name );
