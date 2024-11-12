@@ -56,7 +56,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Public' ) ) {
 
             $esc_tag = sprintf(
                 /* translators: 1:Name of a theme 2: Version number of a theme 3:Name of theme author */
-                esc_attr__( '%1$s %2$s by %3$s', 'ppa' ),
+                esc_attr__( '%1$s %2$s by %3$s', 'product-attribute-plus' ),
                 WPAP_CONST_PLUGIN_NAME,
                 WPAP_CONST_VERSION,
                 'M Gogul Saravanan'
