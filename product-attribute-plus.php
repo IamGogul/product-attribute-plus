@@ -77,9 +77,9 @@ if( !function_exists( 'prod_attr_plus_is_var_style_exists' ) ) {
 	}
 }
 
-if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
+if( !class_exists( 'MGS_Product_Attr_Plus_WP_Plugin' ) ) {
 
-    final class Woo_Product_Attr_Plus_WP_Plugin {
+    final class MGS_Product_Attr_Plus_WP_Plugin {
 
 		/**
 		 * A reference to an instance of this class.
@@ -306,7 +306,7 @@ if( !function_exists( 'woo_pa_plus_wp_plugin' ) ) {
      * Returns instance of the WooCommerce Product Attributes Plus WP Plugin class.
      */
     function woo_pa_plus_wp_plugin() {
-        return Woo_Product_Attr_Plus_WP_Plugin::get_instance();
+        return MGS_Product_Attr_Plus_WP_Plugin::get_instance();
     }
 }
 
