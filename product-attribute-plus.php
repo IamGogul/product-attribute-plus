@@ -33,8 +33,8 @@ if( !function_exists( 'prod_attr_plus_debug' ) ) {
 /**
  * Check whether a plugin installed.
  */
-if( !function_exists( 'woo_pa_plus_is_plugin_active' ) ) {
-	function woo_pa_plus_is_plugin_active( $plugin_file_path = NULL ) {
+if( !function_exists( 'prod_attr_plus_is_plugin_active' ) ) {
+	function prod_attr_plus_is_plugin_active( $plugin_file_path = NULL ) {
 		$plugins = get_plugins();
 		return isset( $plugins[ $plugin_file_path ] );
 	}
@@ -231,7 +231,7 @@ if( !class_exists( 'Woo_Product_Attr_Plus_WP_Plugin' ) ) {
                     );
 
                     $button           = '';
-                    $is_woo_installed = woo_pa_plus_is_plugin_active( 'woocommerce/woocommerce.php' );
+                    $is_woo_installed = prod_attr_plus_is_plugin_active( 'woocommerce/woocommerce.php' );
 
                     if( $is_woo_installed && current_user_can( 'activate_plugins' ) ) {
 						$button = sprintf( '<a href="%1$s" class="button-primary">%2$s</a>',
