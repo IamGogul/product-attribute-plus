@@ -4,7 +4,7 @@ export default class AdminWPAPVariableProductSettings {
     constructor(options) {
         this.options = $.extend(true, {
             vProductSettingsHandler  : "#product_attr_plus_manage_swatch_vproduct",
-            vProductSettingsSelector : ".woo-pap-manage-swatch-vproduct-field",
+            vProductSettingsSelector : ".product-attribute-plus-manage-swatch-vproduct-field",
         }, options );
 
         this._init();

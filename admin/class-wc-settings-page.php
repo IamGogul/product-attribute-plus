@@ -150,7 +150,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                         'default'  => 'product-attribute-plus-swatch-size product-attribute-plus-swatch-size-small',
                         'options'  => prod_attr_plus_wp_plugin()->swatch_sizes,
                         'autoload' => false,
-                        'class'    => 'woo-pap-manage-swatch-vproduct-field',
+                        'class'    => 'product-attribute-plus-manage-swatch-vproduct-field',
                     ],
                     [
                         'title'    => esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
@@ -162,7 +162,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                         'default'  => 'product-attribute-plus-swatch-shape product-attribute-plus-swatch-shape-square',
                         'options'  => prod_attr_plus_wp_plugin()->swatch_shapes,
                         'autoload' => false,
-                        'class'    => 'woo-pap-manage-swatch-vproduct-field',
+                        'class'    => 'product-attribute-plus-manage-swatch-vproduct-field',
                     ],
                     [
                         'title'    => esc_html__( 'Swatch Border Color', 'product-attribute-plus' ),
@@ -173,7 +173,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                         'default'  => '#dddddd',
                         'autoload' => false,
                         'desc_tip' => true,
-                        'class'    => 'woo-pap-manage-swatch-vproduct-field ',
+                        'class'    => 'product-attribute-plus-manage-swatch-vproduct-field ',
                     ],
                     [
                         'title'    => esc_html__( 'Swatch Hover Border Color', 'product-attribute-plus' ),
@@ -184,7 +184,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                         'default'  => '#000000',
                         'autoload' => false,
                         'desc_tip' => true,
-                        'class'    => 'woo-pap-manage-swatch-vproduct-field ',
+                        'class'    => 'product-attribute-plus-manage-swatch-vproduct-field ',
                     ],
                     [
                         'title'    => esc_html__( 'Active Swatch Border Color', 'product-attribute-plus' ),
@@ -195,7 +195,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Settings_Page' ) ) {
                         'default'  => '#ff0000',
                         'autoload' => false,
                         'desc_tip' => true,
-                        'class'    => 'woo-pap-manage-swatch-vproduct-field ',
+                        'class'    => 'product-attribute-plus-manage-swatch-vproduct-field ',
                     ],
                 [
 					'type' => 'sectionend',
