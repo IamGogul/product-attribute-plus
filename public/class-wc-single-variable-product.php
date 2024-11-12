@@ -271,12 +271,12 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 
 }
 
-if( !function_exists( 'woo_pa_plus_wp_plugin_single_variable_product' ) ) {
+if( !function_exists( 'prod_attr_plus_wp_plugin_single_variable_product' ) ) {
 
     /**
      * Returns the instance of a class.
      */
-    function woo_pa_plus_wp_plugin_single_variable_product() {
+    function prod_attr_plus_wp_plugin_single_variable_product() {
 
         $vproduct = get_option( 'woo_pap_manage_swatch_vproduct', 'yes' );
 
@@ -292,5 +292,5 @@ if( !function_exists( 'woo_pa_plus_wp_plugin_single_variable_product' ) ) {
     }
 }
 
-woo_pa_plus_wp_plugin_single_variable_product();
+prod_attr_plus_wp_plugin_single_variable_product();
 /* Omit closing PHP tag to avoid "Headers already sent" issues. */
