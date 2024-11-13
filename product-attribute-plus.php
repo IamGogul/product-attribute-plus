@@ -116,10 +116,10 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
         public function __construct() {
 
 			$this->product_attr_types = apply_filters( 'product-attribute-plus-filter/plugin/product-attr-types', [
-				'product-attribute-plus-color-sw' => esc_html__( 'Color Swatch', 'product-attribute-plus' ),
-				'product-attribute-plus-image-sw' => esc_html__( 'Image Swatch', 'product-attribute-plus' ),
-				'product-attribute-plus-label-sw' => esc_html__( 'Label Swatch', 'product-attribute-plus' ),
-				'product-attribute-plus-radio'    => esc_html__( 'Radio Button', 'product-attribute-plus' ),
+				'pa-plus-color-sw' => esc_html__( 'Color Swatch', 'product-attribute-plus' ),
+				'pa-plus-image-sw' => esc_html__( 'Image Swatch', 'product-attribute-plus' ),
+				'pa-plus-label-sw' => esc_html__( 'Label Swatch', 'product-attribute-plus' ),
+				'pa-plus-radio'    => esc_html__( 'Radio Button', 'product-attribute-plus' ),
 			]);
 
 			$this->swatch_sizes = apply_filters( 'product-attribute-plus-filter/plugin/swatch/sizes', [
