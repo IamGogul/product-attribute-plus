@@ -47,15 +47,15 @@ var AdminWPAPProductAttrPage = /*#__PURE__*/function () {
           var _this = $(this),
             _val = _this.val();
           switch (_val) {
-            case 'product-attribute-plus-color-sw':
+            case 'pa-plus-color-sw':
               $addFields.show();
               $editFields.show();
               break;
-            case 'product-attribute-plus-image-sw':
+            case 'pa-plus-image-sw':
               $addFields.show();
               $editFields.show();
               break;
-            case 'product-attribute-plus-label-sw':
+            case 'pa-plus-label-sw':
               $addFields.show();
               $editFields.show();
               break;
@@ -211,7 +211,7 @@ var AdminWPAPColorSwatch = /*#__PURE__*/function () {
       if (!options.hasOwnProperty('data')) {
         return;
       }
-      if (0 <= options.data.indexOf('product-attribute-plus-color-sw')) {
+      if (0 <= options.data.indexOf('pa-plus-color-sw')) {
         if (request && 4 === request.readyState && 200 === request.status && options.data && 0 <= options.data.indexOf('action=add-tag')) {
           var $res = wpAjax.parseAjaxResponse(request.responseXML, 'ajax-response');
           if (!$res || $res.errors) {
@@ -331,7 +331,7 @@ var AdminWPAPImageSwatch = /*#__PURE__*/function () {
         return;
       }
       console.log(options.data);
-      if (0 <= options.data.indexOf('product-attribute-plus-image-sw')) {
+      if (0 <= options.data.indexOf('pa-plus-image-sw')) {
         if (request && 4 === request.readyState && 200 === request.status && options.data && 0 <= options.data.indexOf('action=add-tag')) {
           var $res = wpAjax.parseAjaxResponse(request.responseXML, 'ajax-response');
           if (!$res || $res.errors) {

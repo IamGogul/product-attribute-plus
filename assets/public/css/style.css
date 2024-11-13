@@ -61,21 +61,21 @@
 }
 
 /* Radio Button Design */
-.product-attribute-plus-swatch.product-attribute-plus-radio li {
+.product-attribute-plus-swatch.pa-plus-radio li {
   margin-right: 30px;
 }
 
-.product-attribute-plus-swatch.product-attribute-plus-radio li .product-attribute-plus-sw-wrap {
+.product-attribute-plus-swatch.pa-plus-radio li .product-attribute-plus-sw-wrap {
   border: 0;
 }
 
-.product-attribute-plus-swatch.product-attribute-plus-radio li .product-attribute-plus-sw-wrap span {
+.product-attribute-plus-swatch.pa-plus-radio li .product-attribute-plus-sw-wrap span {
   position: relative;
   padding-left: 25px;
   width: auto;
 }
 
-.product-attribute-plus-swatch.product-attribute-plus-radio li .product-attribute-plus-sw-wrap span:before, .product-attribute-plus-swatch.product-attribute-plus-radio li .product-attribute-plus-sw-wrap span:after {
+.product-attribute-plus-swatch.pa-plus-radio li .product-attribute-plus-sw-wrap span:before, .product-attribute-plus-swatch.pa-plus-radio li .product-attribute-plus-sw-wrap span:after {
   content: "";
   position: absolute;
   width: 14px;
@@ -88,11 +88,11 @@
   border-radius: 30px;
 }
 
-.product-attribute-plus-swatch.product-attribute-plus-radio li.selected .product-attribute-plus-sw-wrap {
+.product-attribute-plus-swatch.pa-plus-radio li.selected .product-attribute-plus-sw-wrap {
   transform: scale(1);
 }
 
-.product-attribute-plus-swatch.product-attribute-plus-radio li.selected .product-attribute-plus-sw-wrap span:after {
+.product-attribute-plus-swatch.pa-plus-radio li.selected .product-attribute-plus-sw-wrap span:after {
   left: 3px;
   width: 8px;
   height: 8px;

@@ -98,7 +98,7 @@ export default class AdminWPAPImageSwatch {
 
         console.log( options.data );
 
-        if( 0 <= options.data.indexOf('product-attribute-plus-image-sw') ) {
+        if( 0 <= options.data.indexOf('pa-plus-image-sw') ) {
 
 			if ( request && 4 === request.readyState && 200 === request.status
 				&& options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {

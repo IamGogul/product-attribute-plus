@@ -32,7 +32,7 @@ export default class AdminWPAPColorSwatch {
 			return;
 		}
 
-        if( 0 <= options.data.indexOf('product-attribute-plus-color-sw') ) {
+        if( 0 <= options.data.indexOf('pa-plus-color-sw') ) {
 
 			if ( request && 4 === request.readyState && 200 === request.status
 				&& options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {

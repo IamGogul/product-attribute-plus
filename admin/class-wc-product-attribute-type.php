@@ -110,7 +110,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
 
             switch ( $attribute_type ) {
 
-                case 'product-attribute-plus-color-sw':
+                case 'pa-plus-color-sw':
                     $field = sprintf(
                         '<div class="product-attribute-plus-attr-col %s" style="background-color:%s;"></div>',
                         esc_attr( $attribute_type ),
@@ -118,10 +118,10 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-color-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-color-sw', wp_kses_post( $field ) );
                 break;
 
-                case 'product-attribute-plus-image-sw':
+                case 'pa-plus-image-sw':
                     $image = $attribute_value ? wp_get_attachment_image_src( $attribute_value, [ 100, 100 ] ) : '';
                     $image = $image ? $image[0] : WPAP_CONST_URL . 'assets/admin/images/placeholder.png';
 
@@ -132,10 +132,10 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-image-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-image-sw', wp_kses_post( $field ) );
                 break;
 
-                case 'product-attribute-plus-label-sw':
+                case 'pa-plus-label-sw':
                     $field = sprintf(
                         '<div class="product-attribute-plus-attr-col %s">%s</div>',
                         esc_attr( $attribute_type ),
@@ -143,7 +143,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
 
                     // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/product-attribute-plus-label-sw', wp_kses_post( $field ) );
+                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-label-sw', wp_kses_post( $field ) );
                 break;
 
             }
@@ -189,7 +189,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                 return;
             }
 
-            if( !in_array( $attribute_type, [ 'product-attribute-plus-color-sw', 'product-attribute-plus-image-sw', 'product-attribute-plus-label-sw' ] ) ) {
+            if( !in_array( $attribute_type, [ 'pa-plus-color-sw', 'pa-plus-image-sw', 'pa-plus-label-sw' ] ) ) {
                 return;
             }
 
@@ -214,7 +214,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
             );
 
             switch( $attribute_type ) {
-                case 'product-attribute-plus-color-sw':
+                case 'pa-plus-color-sw':
                     printf(
                         '<input type="text" id="term-%1$s" class="product-attribute-plus-color-picker" name="%1$s" value="%2$s"/>',
                         esc_attr( $attribute_type ),
@@ -222,7 +222,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
                 break;
 
-                case 'product-attribute-plus-image-sw':
+                case 'pa-plus-image-sw':
                     if( 'edit' == $mode && !empty( $attribute_value ) ) {
                         $image = $attribute_value ? wp_get_attachment_image_src( $attribute_value, [ 100, 100 ] ) : '';
                         $image = $image ? $image[0] : '';
@@ -254,7 +254,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                     );
                 break;
 
-                case 'product-attribute-plus-label-sw':
+                case 'pa-plus-label-sw':
                     printf(
                         '<input type="text" id="term-%1$s" class="regular-text product-attribute-plus-label" name="%1$s" value="%2$s"/>',
                         esc_attr( $attribute_type ),

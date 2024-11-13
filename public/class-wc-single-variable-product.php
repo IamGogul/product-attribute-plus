@@ -154,7 +154,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 				$settings['shape'],
 			];
 
-			if( $attribute_type === 'product-attribute-plus-radio' ) {
+			if( $attribute_type === 'pa-plus-radio' ) {
 				unset( $class[2], $class[3] );
 			}
 
@@ -162,7 +162,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
             $html .= sprintf( '<ul class="%1$s" data-attribute="%2$s">', esc_attr( $class ), $attribute_name  );
 
             switch ( $attribute_type ) {
-                case 'product-attribute-plus-color-sw':
+                case 'pa-plus-color-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -186,7 +186,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
                 break;
 
-                case 'product-attribute-plus-image-sw':
+                case 'pa-plus-image-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -211,7 +211,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
 				break;
 
-                case 'product-attribute-plus-label-sw':
+                case 'pa-plus-label-sw':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;
@@ -235,7 +235,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
                     }
 				break;
 
-                case 'product-attribute-plus-radio':
+                case 'pa-plus-radio':
                     foreach( $terms as $term ) {
 						$term_id   = $term->term_id;
 						$term_slug = $term->slug;

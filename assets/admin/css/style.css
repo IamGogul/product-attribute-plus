@@ -4,13 +4,13 @@
   width: 40px;
 }
 
-.product-attribute-plus-attr-col.product-attribute-plus-label-sw {
+.product-attribute-plus-attr-col.pa-plus-label-sw {
   font-weight: 700;
   line-height: 40px;
   text-align: center;
 }
 
-.product-attribute-plus-attr-col.product-attribute-plus-image-sw {
+.product-attribute-plus-attr-col.pa-plus-image-sw {
   background-repeat: no-repeat;
   background-size: cover;
 }
