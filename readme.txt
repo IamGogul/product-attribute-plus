@@ -3,7 +3,7 @@ Contributors:iamgogul
 Tags:Swatches, Product Attributes, Product Attributes Plus, Color + Image + Label Swatches, Swatch Shapes
 Requires PHP: 7.0
 Requires at least:6.4
-Tested up to:6.6.2
+Tested up to:6.7
 Stable tag:1.0.0
 License:GPLv2 or later
 License URI:http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
