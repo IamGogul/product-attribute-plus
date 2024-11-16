@@ -125,7 +125,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
              */
             if( current_user_can( 'manage_options' ) ) {
                 // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-				$verify_nonce = wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-add-new_attribute' );
+				$verify_nonce = wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'woocommerce-add-new_attribute' );
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {
 						$key = sprintf('_product_attr_plus_shape_%d', $id );
@@ -205,7 +205,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
             if( current_user_can( 'manage_options' ) ) {
 
                 // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
-				$verify_nonce = wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-save-attribute_' . $edit );
+				$verify_nonce = wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'woocommerce-save-attribute_' . $edit );
 
 				if( $verify_nonce ) {
 					if( isset( $_POST['attribute_pap_shape'] ) ) {

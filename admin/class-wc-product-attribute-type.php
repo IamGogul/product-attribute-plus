@@ -104,7 +104,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
          */
         public function add_attribute_column_content( $columns, $column, $term_id ) {
             // phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
-            $attribute       = prod_attr_plus_get_tax_attribute( $_REQUEST['taxonomy'] );
+            $attribute       = prod_attr_plus_get_tax_attribute( sanitize_text_field( $_REQUEST['taxonomy'] ) );
             $attribute_type  = $attribute->attribute_type;
             $attribute_value = get_term_meta( $term_id, $attribute_type, true );
 
@@ -196,7 +196,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
             if( 'edit' == $mode ) {
                 printf(
                     '<input type="hidden" name="post_type" value="%1$s"/>',
-                    esc_attr( $_GET['post_type'] ) // phpcs:disable WordPress.Security.NonceVerification.Recommended
+                    esc_attr( sanitize_text_field( $_GET['post_type'] ) ) // phpcs:disable WordPress.Security.NonceVerification.Recommended
                 );
             }
 
