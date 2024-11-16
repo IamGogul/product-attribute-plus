@@ -94,8 +94,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 				</div>',
 				esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
 
-				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-				$this->_swatch_shape_options(),
+				wp_kses(
+					$this->_swatch_shape_options(),
+					[
+						'option' => [
+							'value' => [],
+						],
+					]
+				),
 
 				esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 			);
@@ -111,8 +117,14 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 				</div>',
 				esc_html__( 'Swatch Size', 'product-attribute-plus' ),
 
-				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-				$this->_swatch_size_options(),
+				wp_kses(
+					$this->_swatch_size_options(),
+					[
+						'option' => [
+							'value' => [],
+						],
+					]
+				),
 
 				esc_html__( 'Determines the size of the swatch to be displayed.', 'product-attribute-plus' )
 			);
@@ -168,8 +180,15 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 					</tr>',
 					esc_html__( 'Swatch Shape', 'product-attribute-plus' ),
 
-					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-					$this->_swatch_shape_options( get_option( $pap_shape_key ) ),
+					wp_kses(
+						$this->_swatch_shape_options( get_option( $pap_shape_key ) ),
+						[
+							'option' => [
+								'value'    => [],
+								'selected' => [],
+							]
+						]
+					),
 
 					esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 				);
@@ -189,8 +208,15 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 					</tr>',
 					esc_html__( 'Swatch Size', 'product-attribute-plus' ),
 
-					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-					$this->_swatch_size_options( get_option( $pap_size_key ) ),
+					wp_kses(
+						$this->_swatch_size_options( get_option( $pap_size_key ) ),
+						[
+							'option' => [
+								'value'    => [],
+								'selected' => [],
+							]
+						]
+					),
 
 					esc_html__( 'Determines the shape of the swatch to be displayed.', 'product-attribute-plus' )
 				);
@@ -239,9 +265,9 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			foreach( $options as $key => $value ) {
 				$select_options .= sprintf(
 					'<option value="%1$s" %2$s>%3$s</option>',
-					$key,
+					esc_attr( $key ),
 					( $selected == $key ? 'selected' : '' ),
-					$value
+					esc_html( $value )
 				);
 			}
 
@@ -262,9 +288,9 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attributes' ) ) {
 			foreach( $options as $key => $value ) {
 				$select_options .= sprintf(
 					'<option value="%1$s" %2$s>%3$s</option>',
-					$key,
+					esc_attr( $key ),
 					( $selected == $key ? 'selected' : '' ),
-					$value
+					esc_html( $value )
 				);
 			}
 

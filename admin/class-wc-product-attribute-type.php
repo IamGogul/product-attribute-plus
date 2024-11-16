@@ -117,8 +117,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                         esc_attr( $attribute_value )
                     );
 
-                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-color-sw', wp_kses_post( $field ) );
+                    echo wp_kses( $field, [ 'div' => [ 'class' => [], 'style' => [], ] ] );
                 break;
 
                 case 'pa-plus-image-sw':
@@ -131,8 +130,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                         esc_url( $image )
                     );
 
-                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-image-sw', wp_kses_post( $field ) );
+                    echo wp_kses( $field, [ 'div' => [ 'class' => [], 'style' => [], ] ] );
                 break;
 
                 case 'pa-plus-label-sw':
@@ -142,8 +140,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                         esc_attr( $attribute_value )
                     );
 
-                    // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-                    echo apply_filters( 'product-attribute-plus-filter/plugin/attr-col-content/pa-plus-label-sw', wp_kses_post( $field ) );
+                    echo wp_kses( $field, [ 'div' => [ 'class' => [] ] ] );
                 break;
 
             }
