@@ -205,6 +205,8 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Single_Variable_Product' ) ) {
 								esc_attr( $term_id ),
 								esc_attr( $term->slug ),
 								esc_attr( $term->name ),
+
+								// phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 								$image ? wp_get_attachment_image( $image ) : '<img src="'. esc_url( WPAP_CONST_URL . 'assets/admin/images/placeholder.png' ).'" alt="'. esc_attr( $attribute_type ) .'"/>'
 							);
                         }

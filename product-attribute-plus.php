@@ -163,6 +163,12 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin' ) ) {
 				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			}
 
+			/**
+			 * We've add 3 args to provide WordPress 6.7.1 compatibility.
+			 * 1. $plugin_file - string - Absolute path to the main plugin file.
+			 * 2. $markup - bool - If the returned data should have HTML markup applied.
+			 * 3. $translate - bool - If the returned data should be translated.
+			 */
             $plugin_data = get_plugin_data( WPAP_CONST_FILE );
 
             $this->define( 'WPAP_CONST_PLUGIN_NAME', sanitize_text_field( $plugin_data['Name'] ) );

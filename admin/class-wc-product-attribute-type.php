@@ -224,6 +224,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Product_Attribute_Type' ) ) {
                         $image = $attribute_value ? wp_get_attachment_image_src( $attribute_value, [ 100, 100 ] ) : '';
                         $image = $image ? $image[0] : '';
 
+                        // phpcs:disable PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
                         printf(
                             '<div class="product-attribute-plus-sw-image-img-holder">
                                 <div class="pap-sw-image-img">
