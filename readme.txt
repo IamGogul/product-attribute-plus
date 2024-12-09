@@ -64,6 +64,15 @@ For more details on setting up the build process, please refer to the `package.j
 - `npm run js:dev` – Creates both uncompressed and development versions of the JavaScript files.
 - `npm run js:prod` – Builds production (compressed) versions of the JavaScript files.
 
+== Screenshots ==
+1. Swatches Settings Panel
+2. Product Attributes Type dropdown
+3. Configuring Color Swatch Terms
+4. Configuring Image Swatch Terms
+5. Configuring Label Swatch Terms
+6. Configuring Radio Button Type Terms
+7. Showing Swatches in Frontend
+
 == Changelog ==
 = 1.0.0 =
 *   Initial release

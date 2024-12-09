@@ -73,7 +73,7 @@ if( !class_exists( 'WCPAPLUS_WP_Plugin_Action_Links' ) ) {
 
 				$new_meta ['docs'] = sprintf(
                     '<a href="%1$s" target="_blank">📙 %2$s</a>',
-					esc_url( 'plugins.gogul.pro/product-attribute-plus' ),
+					esc_url( 'plugins.gogul.pro/docs/product-attribute-plus' ),
 					esc_html__( 'Documentation', 'product-attribute-plus' )
                 );
 
